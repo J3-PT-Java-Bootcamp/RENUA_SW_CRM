@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fffb96f7-8080-49fd-b4f4-41ff52ddf049" name="Changes" comment="Lambda event">
+    <list default="true" id="fffb96f7-8080-49fd-b4f4-41ff52ddf049" name="Changes" comment="Main cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/commander/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/commander/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/commander/CommandResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/commander/CommandResult.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657977465038</updated>
       <workItem from="1657977466567" duration="1135000" />
-      <workItem from="1658246702568" duration="4923000" />
+      <workItem from="1658246702568" duration="5217000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1657977630210</created>
@@ -104,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658250973077</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Main cleanup">
+      <created>1658251675306</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1658251675306</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +134,7 @@
     <MESSAGE value="COmmander" />
     <MESSAGE value="Added parsed parameters" />
     <MESSAGE value="Lambda event" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lambda event" />
+    <MESSAGE value="Main cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main cleanup" />
   </component>
 </project>
