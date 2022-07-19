@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fffb96f7-8080-49fd-b4f4-41ff52ddf049" name="Changes" comment="Basic dependencies">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/commander/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/commander/CommandResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/commander/Commander.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/userinput/UserInput.java" afterDir="false" />
+    <list default="true" id="fffb96f7-8080-49fd-b4f4-41ff52ddf049" name="Changes" comment="COmmander">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/commander/CommandResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/commander/CommandResult.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657977465038</updated>
       <workItem from="1657977466567" duration="1135000" />
-      <workItem from="1658246702568" duration="3072000" />
+      <workItem from="1658246702568" duration="3360000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1657977630210</created>
@@ -87,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657977630210</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="COmmander">
+      <created>1658249896441</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658249896441</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,6 +110,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="COmmander" />
+    <option name="LAST_COMMIT_MESSAGE" value="COmmander" />
   </component>
 </project>

@@ -26,4 +26,11 @@ public class CommandResult<T> {
     private void setParameters(Map<String, String> parameters) {
         this.parameters = parameters;
     }
+    public String getParameter(String key) {
+        return getParameters().get(key);
+    }
+
+    public int getIntegerParameter(String key) {
+        return Integer.parseInt(getParameters().get(key));
+    }
 }
