@@ -4,9 +4,18 @@ import com.ironhack.userinput.UserInput;
 
 public class Commander<T> {
     private final Command<T>[] commands;
+    private boolean autorun = false;
+
+    public void setAutorun(boolean autorun) {
+        this.autorun = autorun;
+    }
 
     public Commander(Command<T>[] commands) {
         this.commands = commands;
+    }
+    public Commander(Command<T>[] commands, boolean autorun) {
+        this.commands = commands;
+        setAutorun(autorun);
     }
 
     public CommandResult<T> askForCommand() {
@@ -22,6 +31,7 @@ public class Commander<T> {
             }
         } while (commandResult == null);
 
+        if(autorun) commandResult.run();
         return commandResult;
     }
 }
