@@ -1,26 +1,30 @@
 package com.ironhack.commander;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
+import java.util.function.Consumer;
 
 public class CommandResult<T> {
     private Map<String, String> parameters;
-    private T result;
+    private Command<T> command;
 
-    public CommandResult(Map<String, String> parameters, T result) {
+    public CommandResult(Map<String, String> parameters, Command command) {
         this.parameters = parameters;
-        this.result = result;
+        this.command = command;
     }
 
     public T getResult() {
-        return result;
+        return command.getValue();
     }
 
-    private void setResult(T result) {
-        this.result = result;
-    }
 
     public Map<String, String> getParameters() {
         return parameters;
+    }
+
+    public void run() {
+        this.command.run(this);
     }
 
     private void setParameters(Map<String, String> parameters) {

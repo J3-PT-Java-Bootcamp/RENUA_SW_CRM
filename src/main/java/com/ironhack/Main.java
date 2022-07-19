@@ -12,10 +12,12 @@ public class Main {
         System.out.println("Hello world!");
 
         var commander = new Commander<CommandType>(new Command[] {
-            new Command<>("say :word", CommandType.saySth)
+            new Command<>("say :word", CommandType.saySth).addOnRun((cr) -> {
+                System.out.println(cr.getParameter("word"));
+            })
         });
 
         final var result = commander.askForCommand();
-        System.out.println(result.getParameter("word"));
+        result.run();
     }
 }

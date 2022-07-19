@@ -5,11 +5,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
+import java.util.function.Consumer;
 
 public class Command<T> {
     private String command;
     private String description;
-    private final List<Callable> onRun = new LinkedList<>();
+    private final List<Consumer<CommandResult<T>>> onRun = new LinkedList<>();
     private T value;
 
     public T getValue() {
@@ -36,14 +37,14 @@ public class Command<T> {
         this.description = description;
     }
 
-    public Command<T> addOnRun(Callable onRun) {
+    public Command<T> addOnRun(Consumer<CommandResult<T>> onRun) {
         this.onRun.add(onRun);
         return this;
     }
     public void run(CommandResult<T> cr) {
         for(var onRun: this.onRun) {
             try {
-                onRun.call();
+                onRun.accept(cr);
             } catch (Exception e) {
                 // Exceptions  are stopped here
             }
@@ -80,6 +81,6 @@ public class Command<T> {
             if(!originalCom[i].equals(com[i])) return null;
         }
 
-        return new CommandResult<T>(parameters, getValue());
+        return new CommandResult<T>(parameters, this);
     }
 }
