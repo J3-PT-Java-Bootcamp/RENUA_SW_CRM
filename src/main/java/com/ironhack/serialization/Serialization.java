@@ -47,14 +47,14 @@ public class Serialization<T> {
      * @param table The name of the file to be read.
      * @return A map of the data that was saved in the file.
      */
-    private static Map read(Table table) {
+    private static Map read(Table table) throws FileNotFoundException {
         Map map = null;
 
         try (FileInputStream fis = new FileInputStream(TABLES.get(table)); ObjectInputStream ois = new ObjectInputStream(fis);) {
             map = (Map) ois.readObject();
         } catch (FileNotFoundException e) {
             // Error in accessing the file
-            e.printStackTrace();
+            throw new FileNotFoundException("File not found");
         } catch (IOException e) {
             // Error in converting the Object to bytes
             e.printStackTrace();
@@ -73,8 +73,15 @@ public class Serialization<T> {
      * @return The object with the given id.
      */
     public static Object getById(int id, Table table) {
-        Map map = read(table);
-        return map.get(id);
+        Map map;
+
+        try {
+            map = read(table);
+            return map.get(id);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     /**
@@ -84,7 +91,15 @@ public class Serialization<T> {
      * @return A map of the contents of the file.
      */
     public static Map getAll(Table table) {
-        return read(table);
+        Map map;
+
+        try {
+            map = read(table);
+            return map;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     /**
@@ -96,11 +111,11 @@ public class Serialization<T> {
      */
     public static void put(Serialize object, Table table) {
 
-        // If the file exists, read it, add the object to the map, and save the map
-        Map map = read(table);
+        Map map;
 
-        if(map == null) {
-            // If the file doesn't exist, create a new map, add the object to the map, and save the map
+        try {
+            map = read(table);
+        } catch (FileNotFoundException e) {
             map = new HashMap();
         }
 
@@ -115,7 +130,14 @@ public class Serialization<T> {
      * @param table The name of the file to be read.
      */
     public static void replace(Serialize object, Table table) {
-        Map map = read(table);
+        Map map;
+
+        try {
+            map = read(table);
+        } catch (FileNotFoundException e) {
+            map = new HashMap();
+        }
+
         map.replace(object.getId(), object);
         save(map, table);
     }
@@ -127,8 +149,34 @@ public class Serialization<T> {
      * @param table The name of the file to be saved.
      */
     public static void delete(Serialize object, Table table) {
-        Map map = read(table);
+        Map map;
+
+        try {
+            map = read(table);
+        } catch (FileNotFoundException e) {
+            map = new HashMap();
+        }
+
         map.remove(object.getId());
+        save(map, table);
+    }
+
+    /**
+     * Delete the record with the given id from the given table.
+     *
+     * @param id The id of the object you want to delete.
+     * @param table The table to save to.
+     */
+    public static void delete(int id, Table table) {
+        Map map;
+
+        try {
+            map = read(table);
+        } catch (FileNotFoundException e) {
+            map = new HashMap();
+        }
+
+        map.remove(id);
         save(map, table);
     }
 }
