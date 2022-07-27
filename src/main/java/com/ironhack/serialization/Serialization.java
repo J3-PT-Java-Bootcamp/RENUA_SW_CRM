@@ -29,8 +29,9 @@ public class Serialization<T> {
      */
     private static void save(Map map, Table table) {
 
-        try (FileOutputStream fos = new FileOutputStream(TABLES.get(table));
-             ObjectOutputStream oos = new ObjectOutputStream(fos);) {
+        try {
+            FileOutputStream fos = new FileOutputStream(TABLES.get(table));
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(map);
         } catch (FileNotFoundException e) {
             // Error in accessing the file
@@ -50,7 +51,9 @@ public class Serialization<T> {
     private static Map read(Table table) throws FileNotFoundException {
         Map map = null;
 
-        try (FileInputStream fis = new FileInputStream(TABLES.get(table)); ObjectInputStream ois = new ObjectInputStream(fis);) {
+        try {
+            FileInputStream fis = new FileInputStream(TABLES.get(table));
+            ObjectInputStream ois = new ObjectInputStream(fis);
             map = (Map) ois.readObject();
         } catch (FileNotFoundException e) {
             // Error in accessing the file
@@ -72,12 +75,12 @@ public class Serialization<T> {
      * @param table The name of the file to read from.
      * @return The object with the given id.
      */
-    public static Object getById(int id, Table table) {
+    public static Serialize getById(int id, Table table) {
         Map map;
 
         try {
             map = read(table);
-            return map.get(id);
+            return (Serialize) map.get(id);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             return null;
@@ -116,6 +119,10 @@ public class Serialization<T> {
         try {
             map = read(table);
         } catch (FileNotFoundException e) {
+            map = new HashMap();
+        }
+
+        if(map == null) {
             map = new HashMap();
         }
 
