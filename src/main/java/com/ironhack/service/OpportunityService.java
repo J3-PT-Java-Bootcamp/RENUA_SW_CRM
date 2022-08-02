@@ -1,7 +1,6 @@
 package com.ironhack.service;
 
 import com.ironhack.model.*;
-import com.ironhack.userinput.UserInput;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,7 +17,7 @@ public class OpportunityService {
         System.out.println("3: BOX");
 
 //        ProductType product = new ProductType[] {ProductType.HYBRID, ProductType.FLATBED, ProductType.BOX}[UserInput.getIntBetween(1,3)];
-        ProductType product = new ProductType[] {ProductType.HYBRID, ProductType.FLATBED, ProductType.BOX}[2];
+        Product product = new Product[] {Product.HYBRID, Product.FLATBED, Product.BOX}[2];
 
         System.out.print("\nNumber of trucks:");
 //        int trucksNum = UserInput.getIntBetween(0, 9999);
@@ -26,7 +25,7 @@ public class OpportunityService {
 
         var contact = new Contact(lead);
 
-        return new Opportunity(product, trucksNum, contact, OpportunityStatus.OPEN);
+        return new Opportunity(product, trucksNum, contact, Status.OPEN);
     }
 
     public static int nextId() {

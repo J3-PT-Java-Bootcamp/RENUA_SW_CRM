@@ -6,16 +6,16 @@ import java.util.UUID;
 
 public class Opportunity extends Serialize {
 
-    private ProductType product;
+    private Product product;
     private int quantity;
     private Contact decisionMaker;
-    private OpportunityStatus status;
+    private Status status;
 
     static {
         serialVersionUID = 00003L; // No modify
     }
 
-    public Opportunity(ProductType product, int quantity, Contact decisionMaker, OpportunityStatus status) {
+    public Opportunity(Product product, int quantity, Contact decisionMaker, Status status) {
         super(UUID.randomUUID());
         setProduct(product);
         setQuantity(quantity);
@@ -27,11 +27,11 @@ public class Opportunity extends Serialize {
         return id;
     }
 
-    public ProductType getProduct() {
+    public Product getProduct() {
         return product;
     }
 
-    public void setProduct(ProductType product) {
+    public void setProduct(Product product) {
         this.product = product;
     }
 
@@ -51,11 +51,11 @@ public class Opportunity extends Serialize {
         this.decisionMaker = decisionMaker;
     }
 
-    public OpportunityStatus getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(OpportunityStatus status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 }
