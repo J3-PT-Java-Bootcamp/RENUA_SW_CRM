@@ -31,6 +31,15 @@ public class LeadService {
     public static Lead getLeadById(int id) {
         return leads.get(id);
     }
+    public static Lead deleteLead(int id) {
+        final Lead lead = getLeadById(id);
+        leads.remove(id);
+        return lead;
+    }
+    public static Lead deleteLead(Lead lead) {
+        leads.remove(lead.getId());
+        return lead;
+    }
     public static void showLeads() {
         leads.forEach((id, lead) -> {
             System.out.println(lead.getId() + " -> " + lead.getName());
@@ -39,5 +48,10 @@ public class LeadService {
     public static void showLead(int id) {
         final var lead = getLeadById(id);
         System.out.println(lead.getId() + " -> " + lead.getName());
+    }
+    public static void convertLeadToOpportunity(int id) {
+        final var lead = getLeadById(id);
+        deleteLead(lead);
+        OpportunityService.createFromLead(lead);
     }
 }

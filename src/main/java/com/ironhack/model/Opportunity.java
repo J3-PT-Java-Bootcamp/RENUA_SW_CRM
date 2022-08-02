@@ -1,5 +1,7 @@
 package com.ironhack.model;
 
+import com.ironhack.service.OpportunityService;
+
 public class Opportunity {
     private int id;
     private ProductType productType;
@@ -8,8 +10,8 @@ public class Opportunity {
     private ContactStatus contactStatus;
     private String emailAddress;
 
-    public Opportunity(int id, ProductType productType, int quantity, Contact decisionMaker, ContactStatus contactStatus, String emailAddress) {
-        this.id = id;
+    public Opportunity(ProductType productType, int quantity, Contact decisionMaker, ContactStatus contactStatus, String emailAddress) {
+        this.id = OpportunityService.nextId();
         setProductType(productType);
         setQuantity(quantity);
         setDecisionMaker(decisionMaker);

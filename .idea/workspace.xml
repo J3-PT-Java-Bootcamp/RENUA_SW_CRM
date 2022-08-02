@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56cbeb4f-45b6-4e89-ae7b-b53a00526d8a" name="Changes" comment="SHow lead name and id">
+    <list default="true" id="56cbeb4f-45b6-4e89-ae7b-b53a00526d8a" name="Changes" comment="Lookup lead by Id">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/OpportunityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Opportunity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Opportunity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/service/LeadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/LeadService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659460118717</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Lookup lead by Id">
+      <created>1659460241570</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1659460241570</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +153,7 @@
     <MESSAGE value="Fixed commander" />
     <MESSAGE value="Show leads (missing toString)" />
     <MESSAGE value="SHow lead name and id" />
-    <option name="LAST_COMMIT_MESSAGE" value="SHow lead name and id" />
+    <MESSAGE value="Lookup lead by Id" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lookup lead by Id" />
   </component>
 </project>

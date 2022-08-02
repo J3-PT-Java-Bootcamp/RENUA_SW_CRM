@@ -7,6 +7,7 @@ enum CommandTypes {
     NEW_LEAD,
     SHOW_LEADS,
     LOOKUP_LEAD_ID,
+    CONVERT_LEAD,
     EXIT
 }
 
@@ -22,6 +23,9 @@ public class Main {
             }),
             new Command<>("lookup lead :id", CommandTypes.LOOKUP_LEAD_ID).addOnRun((cr) -> {
                 LeadService.showLead(cr.getIntegerParameter("id"));
+            }),
+            new Command<>("convert :id", CommandTypes.CONVERT_LEAD).addOnRun((cr) -> {
+                LeadService.convertLeadToOpportunity(cr.getIntegerParameter("id"));
             }),
         });
 
