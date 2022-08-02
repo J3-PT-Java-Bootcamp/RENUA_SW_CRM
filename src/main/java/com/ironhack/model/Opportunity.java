@@ -4,18 +4,18 @@ import com.ironhack.service.OpportunityService;
 
 public class Opportunity {
     private int id;
-    private ProductType productType;
+    private ProductType product;
     private int quantity;
     private Contact decisionMaker;
-    private ContactStatus contactStatus;
+    private ContactStatus contact;
     private String emailAddress;
 
-    public Opportunity(ProductType productType, int quantity, Contact decisionMaker, ContactStatus contactStatus, String emailAddress) {
+    public Opportunity(ProductType product, int quantity, Contact decisionMaker, ContactStatus contact, String emailAddress) {
         this.id = OpportunityService.nextId();
-        setProductType(productType);
+        setProduct(product);
         setQuantity(quantity);
         setDecisionMaker(decisionMaker);
-        setContactStatus(contactStatus);
+        setContact(contact);
         setEmailAddress(emailAddress);
     }
 
@@ -27,12 +27,12 @@ public class Opportunity {
         this.id = id;
     }
 
-    public ProductType getProductType() {
-        return productType;
+    public ProductType getProduct() {
+        return product;
     }
 
-    public void setProductType(ProductType productType) {
-        this.productType = productType;
+    public void setProduct(ProductType product) {
+        this.product = product;
     }
 
     public int getQuantity() {
@@ -51,12 +51,12 @@ public class Opportunity {
         this.decisionMaker = decisionMaker;
     }
 
-    public ContactStatus getContactStatus() {
-        return contactStatus;
+    public ContactStatus getContact() {
+        return contact;
     }
 
-    public void setContactStatus(ContactStatus contactStatus) {
-        this.contactStatus = contactStatus;
+    public void setContact(ContactStatus contact) {
+        this.contact = contact;
     }
 
     public String getEmailAddress() {

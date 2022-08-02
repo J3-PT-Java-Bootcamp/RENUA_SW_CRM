@@ -3,8 +3,8 @@ package com.ironhack.model;
 public class Contact {
     private int id;
 
-    public Contact(int id) {
-        this.id = id;
+    public Contact() {
+        // Look for id in COntact service
     }
 
     public int getId() {

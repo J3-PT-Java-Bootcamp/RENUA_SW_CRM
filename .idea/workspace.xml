@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56cbeb4f-45b6-4e89-ae7b-b53a00526d8a" name="Changes" comment="Lookup lead by Id">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/OpportunityService.java" afterDir="false" />
+    <list default="true" id="56cbeb4f-45b6-4e89-ae7b-b53a00526d8a" name="Changes" comment="Basic opportunity">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Contact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Opportunity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Opportunity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/service/LeadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/LeadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/service/OpportunityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/OpportunityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/userinput/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/userinput/UserInput.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,12 +74,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fffb96f7-8080-49fd-b4f4-41ff52ddf049" name="Changes" comment="" />
+      <changelist id="56cbeb4f-45b6-4e89-ae7b-b53a00526d8a" name="Changes" comment="Basic opportunity" />
       <created>1657977465038</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1657977465038</updated>
       <workItem from="1657977466567" duration="1135000" />
+      <workItem from="1659468908490" duration="1574000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1657977630210</created>
@@ -129,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659460241570</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Basic opportunity">
+      <created>1659460732374</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1659460732374</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +163,7 @@
     <MESSAGE value="Show leads (missing toString)" />
     <MESSAGE value="SHow lead name and id" />
     <MESSAGE value="Lookup lead by Id" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lookup lead by Id" />
+    <MESSAGE value="Basic opportunity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic opportunity" />
   </component>
 </project>

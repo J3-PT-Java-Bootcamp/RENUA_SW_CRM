@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LeadService {
-    private static Map<Integer, Lead> leads = new HashMap<>();
+    private static final Map<Integer, Lead> leads = new HashMap<>();
     public static int nextId() {
         return leads.size();
     }

@@ -7,4 +7,15 @@ public class UserInput {
         System.out.print("\n~$ ");
         return new Scanner(System.in).nextLine();
     }
+
+    public static int getIntBetween(int min, int max) {
+        final var scanner = new Scanner(System.in);
+        do {
+            try {
+                int number = scanner.nextInt();
+                if(number >= min && number <= max) return number;
+            } catch(Exception e) {}
+            System.out.println("[!] Invalid number");
+        } while(true);
+    }
 }
