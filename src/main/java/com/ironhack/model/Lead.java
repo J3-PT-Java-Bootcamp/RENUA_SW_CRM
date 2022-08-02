@@ -1,4 +1,4 @@
-package com.ironhack;
+package com.ironhack.model;
 
 public class Lead extends User {
     private int id;

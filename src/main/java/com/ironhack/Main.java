@@ -10,7 +10,7 @@ enum CommandTypes {
 public class Main {
     public static void main(String[] args) {
         final var commander = new Commander<CommandTypes>(new Command[] {
-                new Command<>("exit", CommandTypes.EXIT),
+            new Command<>("exit", CommandTypes.EXIT),
             new Command<>("new lead", CommandTypes.NEW_LEAD),
         });
 

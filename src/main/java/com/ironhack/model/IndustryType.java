@@ -1,4 +1,4 @@
-package com.ironhack;
+package com.ironhack.model;
 
 public enum IndustryType {
     PRODUCE,

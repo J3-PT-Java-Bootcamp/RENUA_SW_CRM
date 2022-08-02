@@ -1,4 +1,4 @@
-package com.ironhack;
+package com.ironhack.model;
 
 public class Product {
     private String name;
