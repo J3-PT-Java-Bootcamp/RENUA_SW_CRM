@@ -6,6 +6,7 @@ import com.ironhack.service.LeadService;
 enum CommandTypes {
     NEW_LEAD,
     SHOW_LEADS,
+    LOOKUP_LEAD_ID,
     EXIT
 }
 
@@ -18,6 +19,9 @@ public class Main {
             }),
             new Command<>("show leads", CommandTypes.SHOW_LEADS).addOnRun((cr) -> {
                 LeadService.showLeads();
+            }),
+            new Command<>("lookup lead :id", CommandTypes.LOOKUP_LEAD_ID).addOnRun((cr) -> {
+                LeadService.showLead(cr.getIntegerParameter("id"));
             }),
         });
 

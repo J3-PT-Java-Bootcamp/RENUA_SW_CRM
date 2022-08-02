@@ -36,4 +36,8 @@ public class LeadService {
             System.out.println(lead.getId() + " -> " + lead.getName());
         });
     }
+    public static void showLead(int id) {
+        final var lead = getLeadById(id);
+        System.out.println(lead.getId() + " -> " + lead.getName());
+    }
 }
