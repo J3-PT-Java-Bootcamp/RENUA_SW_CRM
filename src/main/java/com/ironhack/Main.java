@@ -5,6 +5,7 @@ import com.ironhack.service.LeadService;
 
 enum CommandTypes {
     NEW_LEAD,
+    SHOW_LEADS,
     EXIT
 }
 
@@ -15,6 +16,9 @@ public class Main {
             new Command<>("new lead", CommandTypes.NEW_LEAD).addOnRun((cr) -> {
                 LeadService.createLead();
             }),
+            new Command<>("show leads", CommandTypes.SHOW_LEADS).addOnRun((cr) -> {
+                LeadService.showLeads();
+            }),
         });
 
         // Run event when a command is executed
@@ -22,7 +26,6 @@ public class Main {
 
         do {
             var command = commander.askForCommand();
-            System.out.println(command.getResult().toString());
             if(command.getResult() == CommandTypes.EXIT) break;
         } while (true);
     }

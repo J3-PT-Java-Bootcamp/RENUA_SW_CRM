@@ -31,4 +31,9 @@ public class LeadService {
     public static Lead getLeadById(int id) {
         return leads.get(id);
     }
+    public static void showLeads() {
+        leads.forEach((id, lead) -> {
+            System.out.println(lead.toString());
+        });
+    }
 }
