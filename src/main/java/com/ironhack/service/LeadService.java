@@ -33,7 +33,7 @@ public class LeadService {
     }
     public static void showLeads() {
         leads.forEach((id, lead) -> {
-            System.out.println(lead.toString());
+            System.out.println(lead.getId() + " -> " + lead.getName());
         });
     }
 }
