@@ -1,15 +1,16 @@
 package com.ironhack.model;
 
+import com.ironhack.service.LeadService;
+
 public class Lead extends User {
     private int id;
     private String companyName;
     private Product[] productsInterest;
 
-    public Lead(String name, String phoneNumber, int id, String companyName, Product[] productsInterest) {
-        super(name, phoneNumber);
-        setId(id);
+    public Lead(String name, String phoneNumber, String companyName, String email) {
+        super(name, phoneNumber, email);
+        setId(LeadService.nextId());
         setCompanyName(companyName);
-        setProductsInterest(productsInterest);
     }
 
     public int getId() {

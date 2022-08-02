@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56cbeb4f-45b6-4e89-ae7b-b53a00526d8a" name="Changes" comment="Initial commit">
+    <list default="true" id="56cbeb4f-45b6-4e89-ae7b-b53a00526d8a" name="Changes" comment="Location refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Lead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Lead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/SalesAssociate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/SalesAssociate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/service/LeadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/LeadService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +57,7 @@
       <module name="RENUA_SW_CRM" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ironhack.*" />
+          <option name="PATTERN" value="com.ironhack.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -84,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657977630210</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Location refactor">
+      <created>1659458499058</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1659458499058</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +114,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Location refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Location refactor" />
   </component>
 </project>
