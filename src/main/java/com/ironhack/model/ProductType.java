@@ -1,7 +1,7 @@
-package com.ironhack;
+package com.ironhack.model;
 
 public enum ProductType {
-    HIBRYD,
+    HYBRID,
     FLATBED,
     BOX
 }

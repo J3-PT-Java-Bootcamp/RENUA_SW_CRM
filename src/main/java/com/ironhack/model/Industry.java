@@ -1,6 +1,6 @@
-package com.ironhack;
+package com.ironhack.model;
 
-public enum IndustryType {
+public enum Industry {
     PRODUCE,
     ECOMMERCE,
     MANUFACTURING,
