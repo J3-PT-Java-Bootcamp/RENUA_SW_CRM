@@ -25,7 +25,7 @@ public class OpportunityService {
 
         var contact = new Contact(lead);
 
-        return new Opportunity(product, trucksNum, contact, Status.OPEN);
+        return new Opportunity(product, trucksNum, contact.getId(), Status.OPEN);
     }
 
     public static int nextId() {
