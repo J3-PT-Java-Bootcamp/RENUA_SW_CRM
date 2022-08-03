@@ -24,8 +24,10 @@ public class OpportunityService {
         int trucksNum = 1000;
 
         var contact = new Contact(lead);
+        // TODO: Save contact
 
         return new Opportunity(product, trucksNum, contact.getId(), Status.OPEN);
+        // TODO: Save opportunity
     }
 
     public static int nextId() {

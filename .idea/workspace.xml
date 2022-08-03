@@ -4,10 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fffb96f7-8080-49fd-b4f4-41ff52ddf049" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+    <list default="true" id="56cbeb4f-45b6-4e89-ae7b-b53a00526d8a" name="Changes" comment="class diagram UML converted into code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/ContactStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/OportunityStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Lead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Lead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Opportunity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Opportunity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/ProductType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/ProductType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/SalesAssociate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/service/LeadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/LeadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/service/OpportunityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/OpportunityService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +51,7 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="com.ironhack.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ironhack.Main" />
       <module name="RENUA_SW_CRM" />
       <extension name="coverage">
@@ -57,8 +66,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.com.ironhack.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -99,5 +107,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.io.FileInputStream" memberName="fd" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
