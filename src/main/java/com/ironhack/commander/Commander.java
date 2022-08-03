@@ -22,8 +22,9 @@ public class Commander<T> {
         CommandResult<T> commandResult = null;
 
         do {
+            String inp = UserInput.readText();
             for (var command : commands) {
-                commandResult = command.tryProcessCommand(UserInput.readText());
+                commandResult = command.tryProcessCommand(inp);
                 if(commandResult != null) break;
             }
             if(commandResult == null) {
