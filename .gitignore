@@ -22,6 +22,10 @@
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
+.idea/encodings.xml
+
+#target
+target
 
 # Gradle
 .idea/**/gradle.xml
