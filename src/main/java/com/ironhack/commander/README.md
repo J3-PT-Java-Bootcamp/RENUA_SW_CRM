@@ -36,4 +36,3 @@ if(command.getResult() == Commands.SayWord) {
     System.out.println(command.getParameter("text"));
 }
 ```
-![Class_Diagram!](com/ironhack/diagrams/UML_CRM_Diagram.PNG)
