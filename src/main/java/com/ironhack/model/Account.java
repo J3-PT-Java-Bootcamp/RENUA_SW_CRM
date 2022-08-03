@@ -12,14 +12,14 @@ public class Account extends Serialize {
     private String city;
     private String country;
     private String companyName; // This attribute can be removed; it appears in one place in the exercise description and not in another.
-    private List<Contact> contactList;
-    private List<Opportunity> opportunityList;
+    private List<UUID> contactList;
+    private List<UUID> opportunityList;
 
     static {
         serialVersionUID = 00004L; // No modify
     }
 
-    public Account(Industry industry, int employeeCount, String city, String country, String companyName, List<Contact> contactList, List<Opportunity> opportunityList) {
+    public Account(Industry industry, int employeeCount, String city, String country, String companyName, List<UUID> contactList, List<UUID> opportunityList) {
         super(UUID.randomUUID());
         this.industry = industry;
         this.employeeCount = employeeCount;
@@ -70,19 +70,19 @@ public class Account extends Serialize {
         this.companyName = companyName;
     }
 
-    public List<Contact> getContactList() {
+    public List<UUID> getContactList() {
         return contactList;
     }
 
-    public void setContactList(List<Contact> contactList) {
+    public void setContactList(List<UUID> contactList) {
         this.contactList = contactList;
     }
 
-    public List<Opportunity> getOpportunityList() {
+    public List<UUID> getOpportunityList() {
         return opportunityList;
     }
 
-    public void setOpportunityList(List<Opportunity> opportunityList) {
+    public void setOpportunityList(List<UUID> opportunityList) {
         this.opportunityList = opportunityList;
     }
 }

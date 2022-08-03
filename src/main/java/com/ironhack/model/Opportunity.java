@@ -8,14 +8,14 @@ public class Opportunity extends Serialize {
 
     private Product product;
     private int quantity;
-    private Contact decisionMaker;
+    private UUID decisionMaker;
     private Status status;
 
     static {
         serialVersionUID = 00003L; // No modify
     }
 
-    public Opportunity(Product product, int quantity, Contact decisionMaker, Status status) {
+    public Opportunity(Product product, int quantity, UUID decisionMaker, Status status) {
         super(UUID.randomUUID());
         setProduct(product);
         setQuantity(quantity);
@@ -43,11 +43,11 @@ public class Opportunity extends Serialize {
         this.quantity = quantity;
     }
 
-    public Contact getDecisionMaker() {
+    public UUID getDecisionMaker() {
         return decisionMaker;
     }
 
-    public void setDecisionMaker(Contact decisionMaker) {
+    public void setDecisionMaker(UUID decisionMaker) {
         this.decisionMaker = decisionMaker;
     }
 
