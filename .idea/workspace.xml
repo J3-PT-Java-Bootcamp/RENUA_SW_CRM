@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56cbeb4f-45b6-4e89-ae7b-b53a00526d8a" name="Changes" comment="Basic opportunity">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Opportunity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Opportunity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/service/LeadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/LeadService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/service/OpportunityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/OpportunityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/userinput/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/userinput/UserInput.java" afterDir="false" />
+    <list default="true" id="fffb96f7-8080-49fd-b4f4-41ff52ddf049" name="Changes" comment="Basic opportunity">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,5 +160,12 @@
     <MESSAGE value="Lookup lead by Id" />
     <MESSAGE value="Basic opportunity" />
     <option name="LAST_COMMIT_MESSAGE" value="Basic opportunity" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.io.FileInputStream" memberName="fd" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
