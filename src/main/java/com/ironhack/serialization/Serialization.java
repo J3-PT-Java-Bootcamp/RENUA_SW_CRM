@@ -86,7 +86,7 @@ public class Serialization<T> {
             return map;
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            return null;
+            return new HashMap();
         }
     }
 

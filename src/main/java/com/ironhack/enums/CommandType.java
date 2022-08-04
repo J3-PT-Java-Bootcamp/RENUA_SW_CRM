@@ -6,5 +6,10 @@ public enum CommandType {
     CONVERT,
     LOOKUP_LEAD,
     CLOSE_LOST,
-    CLOSE_WON
+    CLOSE_WON,
+    NEW_LEAD,
+    LOOKUP_LEAD_ID,
+    CONVERT_LEAD,
+    EXIT
 }
+

@@ -2,6 +2,7 @@ package com.ironhack.model;
 
 import com.ironhack.enums.Industry;
 import com.ironhack.serialization.Serialize;
+import com.ironhack.service.AccountService;
 
 import java.io.Serializable;
 import java.util.List;
@@ -20,8 +21,8 @@ public class Account extends Serialize implements Serializable {
         serialVersionUID = 4L; // No modify
     }
 
-    public Account(int id, Industry industry, int employeeCount, String city, String country, String companyName, List<Integer> contactList, List<Integer> opportunityList) {
-        super(id);
+    public Account(Industry industry, int employeeCount, String city, String country, String companyName, List<Integer> contactList, List<Integer> opportunityList) {
+        super(AccountService.nextId());
         this.industry = industry;
         this.employeeCount = employeeCount;
         this.city = city;

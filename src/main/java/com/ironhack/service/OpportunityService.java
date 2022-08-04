@@ -9,7 +9,7 @@ import com.ironhack.userinput.UserInput;
 import java.util.HashMap;
 import java.util.Map;
 
-public class OpportunityService {
+public class OpportunityService extends MethodsService {
 
     private static final Map<Integer, Opportunity> opportunities = new HashMap<>();
     public static Opportunity createFromLead(Lead lead) {
@@ -35,5 +35,44 @@ public class OpportunityService {
 
     public static int nextId() {
         return opportunities.size();
+    }
+
+    public void updateCloseLostStatus(int id) {
+        var opportunity = getById(id);
+        opportunity.setStatus(Status.CLOSED_LOST);
+        // TODO: Implement save method
+    }
+
+    public void updateCloseWonStatus(int id) {
+        var opportunity = getById(id);
+        opportunity.setStatus(Status.CLOSED_WON);
+        // TODO: Implement save method
+    }
+
+    public static void show() {
+        var objects = Serialization.getAll();
+        objects.forEach((id, object) -> {
+            if(object instanceof Opportunity) {
+                var opportunity = (Opportunity) object;
+                System.out.println(opportunity.getId() + " -> " + opportunity.getStatus());
+            }
+        });
+    }
+
+    public static void show(int id) {
+        final var opportunity = getById(id);
+        System.out.println(opportunity.getId() + " -> " + opportunity.getStatus());
+    }
+
+    public static void delete(int id) {
+        Serialization.delete(id);
+    }
+
+    public static <T> void delete(T opportunity) {
+        Serialization.delete((Opportunity) opportunity);
+    }
+
+    public static Opportunity getById(int id) {
+        return opportunities.get(id);
     }
 }
