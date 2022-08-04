@@ -1,6 +1,6 @@
 package com.ironhack.enums;
 
-public enum IndustryType {
+public enum Industry {
     PRODUCE,
     ECOMMERCE,
     MANUFACTURING,

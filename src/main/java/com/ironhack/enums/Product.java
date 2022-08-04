@@ -1,6 +1,6 @@
 package com.ironhack.enums;
 
-public enum ProductType {
+public enum Product {
     HYBRID,
     FLATBED,
     BOX

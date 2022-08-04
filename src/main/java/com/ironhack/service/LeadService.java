@@ -6,10 +6,9 @@ import com.ironhack.userinput.UserInput;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
 
 public class LeadService {
-    private static final Map<UUID, Lead> leads = new HashMap<>();
+    private static final Map<Integer, Lead> leads = new HashMap<>();
     public static int nextId() {
         return leads.size();
     }
@@ -26,18 +25,18 @@ public class LeadService {
         System.out.print("\nCompany name");
         final String companyName = UserInput.readText();
 
-        final var lead = new Lead(name, leadPn, companyName, leadEmail);
+        final var lead = new Lead(nextId(), name, leadPn, companyName, leadEmail);
 
 //        leads.put(lead.getId(), lead);
         Serialization.put(lead);
 
         return lead;
     }
-    public static Lead getLeadById(UUID id) {
+    public static Lead getLeadById(int id) {
 
         return leads.get(id);
     }
-    public static void deleteLead(UUID id) {
+    public static void deleteLead(int id) {
 //        final Lead lead = getLeadById(id);
 //        leads.remove(id);
 //        return lead;
@@ -56,11 +55,11 @@ public class LeadService {
             }
         });
     }
-    public static void showLead(UUID id) {
+    public static void showLead(int id) {
         final var lead = getLeadById(id);
         System.out.println(lead.getId() + " -> " + lead.getName());
     }
-    public static void convertLeadToOpportunity(UUID id) {
+    public static void convertLeadToOpportunity(int id) {
         final var lead = getLeadById(id);
         deleteLead(lead);
         OpportunityService.createFromLead(lead);
