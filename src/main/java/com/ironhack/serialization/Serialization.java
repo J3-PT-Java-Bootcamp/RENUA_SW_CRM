@@ -61,12 +61,12 @@ public class Serialization<T> {
      * @param id The id of the object you want to get.
      * @return The object with the given id.
      */
-    public static Serialize getById(int id) {
+    public static Object getById(int id) {
         Map map;
 
         try {
             map = read();
-            return (Serialize) map.get(id);
+            return map.get(id);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             return null;
