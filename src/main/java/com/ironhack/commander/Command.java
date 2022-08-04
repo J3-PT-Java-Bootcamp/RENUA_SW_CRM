@@ -76,7 +76,7 @@ public class Command<T> {
                 parameters.put(originalCom[i].substring(1), com[i]);
                 continue;
             }
-            if(!originalCom[i].equals(com[i])) return null;
+            if(!originalCom[i].equalsIgnoreCase(com[i])) return null;
         }
 
         return new CommandResult<T>(parameters, this);

@@ -7,7 +7,7 @@ import java.util.UUID;
 public class Lead extends User {
 
     static {
-        serialVersionUID = 00001L; // No modify
+        serialVersionUID = 1L; // No modif
     }
 
     public Lead(String name, String phoneNumber, String email, String companyName) {

@@ -61,7 +61,7 @@ public class Serialization<T> {
      * @param id The id of the object you want to get.
      * @return The object with the given id.
      */
-    public static Object getById(int id) {
+    public static Object getById(UUID id) {
         Map map;
 
         try {
@@ -155,7 +155,7 @@ public class Serialization<T> {
      *
      * @param id The id of the object you want to delete.
      */
-    public static void delete(int id) {
+    public static void delete(UUID id) {
         Map map;
 
         try {

@@ -12,7 +12,7 @@ public class Opportunity extends Serialize {
     private Status status;
 
     static {
-        serialVersionUID = 00003L; // No modify
+        serialVersionUID = 3L; // No modify
     }
 
     public Opportunity(Product product, int quantity, UUID decisionMaker, Status status) {

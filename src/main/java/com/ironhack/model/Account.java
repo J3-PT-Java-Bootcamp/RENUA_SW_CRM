@@ -16,7 +16,7 @@ public class Account extends Serialize {
     private List<UUID> opportunityList;
 
     static {
-        serialVersionUID = 00004L; // No modify
+        serialVersionUID = 4L; // No modify
     }
 
     public Account(Industry industry, int employeeCount, String city, String country, String companyName, List<UUID> contactList, List<UUID> opportunityList) {

@@ -5,7 +5,7 @@ import java.util.UUID;
 public class Contact extends User {
 
     static {
-        serialVersionUID = 00002L; // No modify
+        serialVersionUID = 2L; // No modify
     }
 
     public  Contact(Lead lead) {

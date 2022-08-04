@@ -1,6 +1,8 @@
 package com.ironhack.service;
 
 import com.ironhack.model.*;
+import com.ironhack.serialization.Serialization;
+import com.ironhack.serialization.Serialize;
 import com.ironhack.userinput.UserInput;
 
 import java.util.HashMap;
@@ -23,10 +25,12 @@ public class OpportunityService {
         int trucksNum = UserInput.getIntBetween(0, 9999);
 
         var contact = new Contact(lead);
-        // TODO: Save contact
+        Serialization.put(contact);
 
-        return new Opportunity(product, trucksNum, contact.getId(), Status.OPEN);
-        // TODO: Save opportunity
+        var opportunity = new Opportunity(product, trucksNum, contact.getId(), Status.OPEN);
+        Serialization.put(opportunity);
+
+        return opportunity;
     }
 
     public static int nextId() {
