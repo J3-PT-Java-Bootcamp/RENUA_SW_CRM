@@ -2,9 +2,10 @@ package com.ironhack.model;
 
 import com.ironhack.serialization.Serialize;
 
+import java.io.Serializable;
 import java.util.UUID;
 
-public abstract class User extends Serialize {
+public abstract class User extends Serialize implements Serializable {
 
     protected String name;
     protected String phoneNumber;

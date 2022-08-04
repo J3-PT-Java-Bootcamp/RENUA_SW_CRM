@@ -3,6 +3,7 @@ package com.ironhack.serialization;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 public class Serialization<T> {
 
