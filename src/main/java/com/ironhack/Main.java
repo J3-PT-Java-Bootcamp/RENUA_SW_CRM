@@ -1,52 +1,40 @@
 package com.ironhack;
-import java.util.Scanner;
+
+import com.ironhack.commander.*;
+import com.ironhack.service.LeadService;
+
+enum CommandTypes {
+    NEW_LEAD,
+    SHOW_LEADS,
+    LOOKUP_LEAD_ID,
+    CONVERT_LEAD,
+    EXIT
+}
 
 public class Main {
     public static void main(String[] args) {
+        final var commander = new Commander<CommandTypes>(new Command[] {
+            new Command<>("exit", CommandTypes.EXIT),
+            new Command<>("new lead", CommandTypes.NEW_LEAD).addOnRun((cr) -> {
+                LeadService.createLead();
+            }),
+            new Command<>("show leads", CommandTypes.SHOW_LEADS).addOnRun((cr) -> {
+                LeadService.showLeads();
+            }),
+            new Command<>("lookup lead :id", CommandTypes.LOOKUP_LEAD_ID).addOnRun((cr) -> {
+                LeadService.showLead(cr.getIntegerParameter("id"));
+            }),
+            new Command<>("convert :id", CommandTypes.CONVERT_LEAD).addOnRun((cr) -> {
+                LeadService.convertLeadToOpportunity(cr.getIntegerParameter("id"));
+            }),
+        });
 
-        LBL lbl = new LBL();
+        // Run event when a command is executed
+        commander.setAutorun(true);
 
-        Scanner scanner = new Scanner(System.in);
-
-        while (true) {
-            System.out.println("\nIntroduce command:");
-            String command = scanner.nextLine().toLowerCase();
-            String[] arrayCommand = command.split(" ");
-            String commandUnited = "";
-            if (arrayCommand.length >= 2) {
-                commandUnited = arrayCommand[0] + " " + arrayCommand[1];
-            } else {
-                commandUnited = arrayCommand[0];
-            }
-            int id = 0;
-            if (arrayCommand.length == 3) {
-                id = Integer.parseInt(arrayCommand[2]);
-            }
-            if (arrayCommand.length == 2 && isNumeric(arrayCommand[1])) {
-                id = Integer.parseInt(arrayCommand[1]);
-                commandUnited = arrayCommand[0];
-            }
-            switch (commandUnited) {
-                case "new lead" -> lbl.createLead();
-                case "show leads" -> lbl.showLeads();
-                case "lookup lead" -> lbl.showLead(id);
-                case "convert" -> lbl.convertLeadToOpportunity(id);
-                case "show opportunities" -> lbl.showOpportunities();
-                case "show accounts" -> lbl.showAccounts();
-                case "close-lost" -> lbl.updateCloseLostStatus(id);
-                case "close-won" -> lbl.updateCloseWonStatus(id);
-                default -> System.out.println("Unknown command");
-            }
-        }
-
-    }
-
-    public static boolean isNumeric(String str) {
-        try {
-            Integer.parseInt(str);
-            return true;
-        } catch (NumberFormatException e) {
-            return false;
-        }
+        do {
+            var command = commander.askForCommand();
+            if(command.getResult() == CommandTypes.EXIT) break;
+        } while (true);
     }
 }

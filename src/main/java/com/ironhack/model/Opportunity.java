@@ -2,9 +2,10 @@ package com.ironhack.model;
 
 import com.ironhack.serialization.Serialize;
 
+import java.io.Serializable;
 import java.util.UUID;
 
-public class Opportunity extends Serialize {
+public class Opportunity extends Serialize implements Serializable {
 
     private Product product;
     private int quantity;
@@ -12,7 +13,7 @@ public class Opportunity extends Serialize {
     private Status status;
 
     static {
-        serialVersionUID = 00003L; // No modify
+        serialVersionUID = 3L; // No modify
     }
 
     public Opportunity(Product product, int quantity, UUID decisionMaker, Status status) {

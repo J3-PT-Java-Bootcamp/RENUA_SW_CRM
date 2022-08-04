@@ -2,10 +2,11 @@ package com.ironhack.model;
 
 import com.ironhack.serialization.Serialize;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.UUID;
 
-public class Account extends Serialize {
+public class Account extends Serialize implements Serializable {
 
     private Industry industry;
     private int employeeCount;
@@ -16,7 +17,7 @@ public class Account extends Serialize {
     private List<UUID> opportunityList;
 
     static {
-        serialVersionUID = 00004L; // No modify
+        serialVersionUID = 4L; // No modify
     }
 
     public Account(Industry industry, int employeeCount, String city, String country, String companyName, List<UUID> contactList, List<UUID> opportunityList) {
