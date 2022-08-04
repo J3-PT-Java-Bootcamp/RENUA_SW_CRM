@@ -3,7 +3,6 @@ package com.ironhack.model;
 import com.ironhack.serialization.Serialize;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 public abstract class User extends Serialize implements Serializable {
 
@@ -12,8 +11,8 @@ public abstract class User extends Serialize implements Serializable {
     protected String email;
     protected String companyName;
 
-    public User(String name, String phoneNumber, String email, String companyName) {
-        super(UUID.randomUUID());
+    public User(int id, String name, String phoneNumber, String email, String companyName) {
+        super(id);
         setName(name);
         setPhoneNumber(phoneNumber);
         setEmail(email);

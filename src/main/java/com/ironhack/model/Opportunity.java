@@ -1,30 +1,32 @@
 package com.ironhack.model;
 
+import com.ironhack.enums.Product;
+import com.ironhack.enums.Status;
 import com.ironhack.serialization.Serialize;
+import com.ironhack.service.OpportunityService;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 public class Opportunity extends Serialize implements Serializable {
 
     private Product product;
     private int quantity;
-    private UUID decisionMaker;
+    private int decisionMaker;
     private Status status;
 
     static {
         serialVersionUID = 3L; // No modify
     }
 
-    public Opportunity(Product product, int quantity, UUID decisionMaker, Status status) {
-        super(UUID.randomUUID());
+    public Opportunity(Product product, int quantity, int decisionMaker, Status status) {
+        super(OpportunityService.nextId());
         setProduct(product);
         setQuantity(quantity);
         setDecisionMaker(decisionMaker);
         setStatus(status);
     }
 
-    public UUID getId() {
+    public int getId() {
         return id;
     }
 
@@ -44,11 +46,11 @@ public class Opportunity extends Serialize implements Serializable {
         this.quantity = quantity;
     }
 
-    public UUID getDecisionMaker() {
+    public int getDecisionMaker() {
         return decisionMaker;
     }
 
-    public void setDecisionMaker(UUID decisionMaker) {
+    public void setDecisionMaker(int decisionMaker) {
         this.decisionMaker = decisionMaker;
     }
 

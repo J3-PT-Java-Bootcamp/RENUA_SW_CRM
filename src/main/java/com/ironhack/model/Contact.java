@@ -1,7 +1,8 @@
 package com.ironhack.model;
 
+import com.ironhack.service.ContactService;
+
 import java.io.Serializable;
-import java.util.UUID;
 
 public class Contact extends User implements Serializable {
 
@@ -10,6 +11,6 @@ public class Contact extends User implements Serializable {
     }
 
     public  Contact(Lead lead) {
-        super(lead.name, lead.phoneNumber, lead.email, lead.companyName);
+        super(ContactService.nextId(), lead.name, lead.phoneNumber, lead.email, lead.companyName);
     }
 }

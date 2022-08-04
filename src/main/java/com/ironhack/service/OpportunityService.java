@@ -1,8 +1,9 @@
 package com.ironhack.service;
 
+import com.ironhack.enums.Product;
+import com.ironhack.enums.Status;
 import com.ironhack.model.*;
 import com.ironhack.serialization.Serialization;
-import com.ironhack.serialization.Serialize;
 import com.ironhack.userinput.UserInput;
 
 import java.util.HashMap;
@@ -11,7 +12,6 @@ import java.util.Map;
 public class OpportunityService {
 
     private static final Map<Integer, Opportunity> opportunities = new HashMap<>();
-
     public static Opportunity createFromLead(Lead lead) {
         System.out.print("\nWrite product:");
 
@@ -25,7 +25,7 @@ public class OpportunityService {
         int trucksNum = UserInput.getIntBetween(0, 9999);
 
         var contact = new Contact(lead);
-        Serialization.put(contact);
+        //TODO: implement put method in ContactService Serialization.put(contact)
 
         var opportunity = new Opportunity(product, trucksNum, contact.getId(), Status.OPEN);
         Serialization.put(opportunity);

@@ -4,7 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fffb96f7-8080-49fd-b4f4-41ff52ddf049" name="Changes" comment="class diagram UML converted into code">
+    <list default="true" id="fffb96f7-8080-49fd-b4f4-41ff52ddf049" name="Changes" comment="Add comment TODO">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/interfaces/ServiceMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/ContactService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/LBL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/client/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/client/Lead.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/client/Opportunity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/commander/CommandResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/commander/CommandResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/entities/Contact.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/entities/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/entities/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/enums/IndustryType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/enums/ProductType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/enums/StatusOption.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Industry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/enums/Industry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Lead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Lead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Opportunity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Opportunity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/enums/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/enums/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/serialization/Serialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/serialization/Serialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/serialization/Serialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/serialization/Serialize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/service/LeadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/LeadService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/service/OpportunityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/OpportunityService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +42,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="Interface" />
       </list>
     </option>
@@ -22,7 +50,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="99-following-from-12" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,18 +74,13 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sergi\IdeaProjects\RENUA_SW_CRM\src\main\java\com\ironhack" />
-    </key>
-  </component>
   <component name="RunManager">
     <configuration name="com.ironhack.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ironhack.Main" />
       <module name="RENUA_SW_CRM" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ironhack.*" />
+          <option name="PATTERN" value="com.ironhack.enums.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -74,13 +97,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="56cbeb4f-45b6-4e89-ae7b-b53a00526d8a" name="Changes" comment="Comments" />
+      <changelist id="56cbeb4f-45b6-4e89-ae7b-b53a00526d8a" name="Changes" comment="Basic opportunity" />
       <created>1657977465038</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1657977465038</updated>
       <workItem from="1657977466567" duration="1135000" />
-      <workItem from="1659566767877" duration="326000" />
+      <workItem from="1659468908490" duration="1574000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1657977630210</created>
@@ -89,14 +112,56 @@
       <option name="project" value="LOCAL" />
       <updated>1657977630210</updated>
     </task>
-    <task id="LOCAL-00002" summary="Comments">
-      <created>1659487517950</created>
+    <task id="LOCAL-00002" summary="Location refactor">
+      <created>1659458499058</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1659487517950</updated>
+      <updated>1659458499058</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Lead create">
+      <created>1659459568910</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1659459568910</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixed commander">
+      <created>1659459845452</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659459845452</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Show leads (missing toString)">
+      <created>1659460032112</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1659460032112</updated>
+    </task>
+    <task id="LOCAL-00006" summary="SHow lead name and id">
+      <created>1659460118717</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1659460118717</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Lookup lead by Id">
+      <created>1659460241570</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1659460241570</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Basic opportunity">
+      <created>1659460732374</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1659460732374</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,8 +180,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <MESSAGE value="Comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comments" />
+    <MESSAGE value="Location refactor" />
+    <MESSAGE value="Lead create" />
+    <MESSAGE value="Fixed commander" />
+    <MESSAGE value="Show leads (missing toString)" />
+    <MESSAGE value="SHow lead name and id" />
+    <MESSAGE value="Lookup lead by Id" />
+    <MESSAGE value="Basic opportunity" />
+    <MESSAGE value="Integrate current classes and methods" />
+    <MESSAGE value="Add comment TODO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add comment TODO" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

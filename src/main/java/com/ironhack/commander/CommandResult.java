@@ -1,7 +1,6 @@
 package com.ironhack.commander;
 
 import java.util.Map;
-import java.util.UUID;
 
 public class CommandResult<T> {
     private Map<String, String> parameters;
@@ -32,7 +31,7 @@ public class CommandResult<T> {
         return getParameters().get(key);
     }
 
-    public UUID getIntegerParameter(String key) {
-        return UUID.fromString(getParameters().get(key));
+    public int getIntegerParameter(String key) {
+        return Integer.parseInt((getParameters().get(key)));
     }
 }

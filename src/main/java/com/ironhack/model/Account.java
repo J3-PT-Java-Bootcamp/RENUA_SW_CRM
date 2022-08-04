@@ -1,10 +1,10 @@
 package com.ironhack.model;
 
+import com.ironhack.enums.Industry;
 import com.ironhack.serialization.Serialize;
 
 import java.io.Serializable;
 import java.util.List;
-import java.util.UUID;
 
 public class Account extends Serialize implements Serializable {
 
@@ -13,15 +13,15 @@ public class Account extends Serialize implements Serializable {
     private String city;
     private String country;
     private String companyName; // This attribute can be removed; it appears in one place in the exercise description and not in another.
-    private List<UUID> contactList;
-    private List<UUID> opportunityList;
+    private List<Integer> contactList;
+    private List<Integer> opportunityList;
 
     static {
         serialVersionUID = 4L; // No modify
     }
 
-    public Account(Industry industry, int employeeCount, String city, String country, String companyName, List<UUID> contactList, List<UUID> opportunityList) {
-        super(UUID.randomUUID());
+    public Account(int id, Industry industry, int employeeCount, String city, String country, String companyName, List<Integer> contactList, List<Integer> opportunityList) {
+        super(id);
         this.industry = industry;
         this.employeeCount = employeeCount;
         this.city = city;
@@ -71,19 +71,19 @@ public class Account extends Serialize implements Serializable {
         this.companyName = companyName;
     }
 
-    public List<UUID> getContactList() {
+    public List<Integer> getContactList() {
         return contactList;
     }
 
-    public void setContactList(List<UUID> contactList) {
+    public void setContactList(List<Integer> contactList) {
         this.contactList = contactList;
     }
 
-    public List<UUID> getOpportunityList() {
+    public List<Integer> getOpportunityList() {
         return opportunityList;
     }
 
-    public void setOpportunityList(List<UUID> opportunityList) {
+    public void setOpportunityList(List<Integer> opportunityList) {
         this.opportunityList = opportunityList;
     }
 }
