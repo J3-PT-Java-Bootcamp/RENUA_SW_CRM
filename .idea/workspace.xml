@@ -4,33 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fffb96f7-8080-49fd-b4f4-41ff52ddf049" name="Changes" comment="Add comment TODO">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/interfaces/ServiceMethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/ContactService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/UserService.java" afterDir="false" />
+    <list default="true" id="fffb96f7-8080-49fd-b4f4-41ff52ddf049" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/CRMStarterService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/LBL.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/client/Account.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/client/Lead.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/client/Opportunity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/commander/CommandResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/commander/CommandResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/entities/Contact.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/entities/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/entities/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/enums/IndustryType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/enums/ProductType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/enums/StatusOption.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Industry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/enums/Industry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Lead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Lead.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Opportunity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Opportunity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/enums/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/enums/Status.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/serialization/Serialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/serialization/Serialization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/serialization/Serialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/serialization/Serialize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/service/ContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/ContactService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/service/LeadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/LeadService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/service/OpportunityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/OpportunityService.java" afterDir="false" />
     </list>
@@ -42,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -90,6 +72,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.com.ironhack.Main" />
         <item itemvalue="Application.com.ironhack.Main" />
       </list>
     </recent_temporary>

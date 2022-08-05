@@ -57,13 +57,13 @@ public class OpportunityService {
 
     public static void show() {
         opportunities.forEach((id, opportunity) -> {
-            System.out.println(opportunity.getId() + " -> " + opportunity.getStatus());
+            System.out.println(opportunity.toString());
         });
     }
 
     public static void show(UUID id) {
         final var opportunity = getById(id);
-        System.out.println(opportunity.getId() + " -> " + opportunity.getStatus());
+        System.out.println(opportunity.toString());
     }
 
     public static Opportunity getById(UUID id) {

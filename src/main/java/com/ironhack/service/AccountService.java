@@ -70,13 +70,13 @@ public class AccountService {
 
     public static void show() {
         accounts.forEach((id, account) -> {
-            System.out.println(account.getId() + " -> " + account.getCompanyName());
+            System.out.println(account.toString());
         });
     }
 
     public static void show(UUID id) {
         final var account = getById(id);
-        System.out.println(account.getId() + " -> " + account.getCompanyName());
+        System.out.println(account.toString());
     }
 
     public static Account getById(UUID id) {

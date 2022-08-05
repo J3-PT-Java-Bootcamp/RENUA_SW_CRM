@@ -22,13 +22,13 @@ public class ContactService {
 
     public static void show() {
         contacts.forEach((id, contact) -> {
-            System.out.println(contact.getId() + " -> " + contact.getName());
+            System.out.println(contact.toString("Contact"));
         });
     }
 
     public static void show(UUID id) {
         final var contact = getById(id);
-        System.out.println(contact.getId() + " -> " + contact.getName());
+        System.out.println(contact.toString("Contact"));
     }
 
     public static Contact getById(UUID id) {
