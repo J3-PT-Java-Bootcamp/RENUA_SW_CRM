@@ -1,26 +1,28 @@
 package com.ironhack.service;
 
 import com.ironhack.model.Contact;
-import com.ironhack.serialization.Serialization;
+import com.ironhack.serialize.SerializeService;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class ContactService extends MethodsService {
+public class ContactService {
     private static final Map<UUID, Contact> contacts = new HashMap<>();
-    
-    public static int nextId() {
-        return contacts.size();
-    }
 
-    public static void show() {
-        var objects = Serialization.getAll();
+    static {
+        var objects = SerializeService.getAll();
         objects.forEach((id, object) -> {
             if(object instanceof Contact) {
                 var contact = (Contact) object;
-                System.out.println(contact.getId() + " -> " + contact.getName());
+                contacts.put(contact.getId(), contact);
             }
+        });
+    }
+
+    public static void show() {
+        contacts.forEach((id, contact) -> {
+            System.out.println(contact.getId() + " -> " + contact.getName());
         });
     }
 
@@ -29,20 +31,12 @@ public class ContactService extends MethodsService {
         System.out.println(contact.getId() + " -> " + contact.getName());
     }
 
-    public static void delete(UUID id) {
-        Serialization.delete(id);
-    }
-
-    public static <T> void delete(T contact) {
-        Serialization.delete((Contact) contact);
-    }
-
     public static Contact getById(UUID id) {
         return contacts.get(id);
     }
 
     public static void put(Contact contact) {
         contacts.put(contact.getId(), contact);
-        Serialization.put(contact);
+        SerializeService.put(contact);
     }
 }

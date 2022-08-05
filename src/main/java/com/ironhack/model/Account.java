@@ -1,10 +1,8 @@
 package com.ironhack.model;
 
 import com.ironhack.enums.Industry;
-import com.ironhack.serialization.Serialize;
-import com.ironhack.service.AccountService;
+import com.ironhack.serialize.Serialize;
 
-import java.io.Serializable;
 import java.util.List;
 import java.util.UUID;
 

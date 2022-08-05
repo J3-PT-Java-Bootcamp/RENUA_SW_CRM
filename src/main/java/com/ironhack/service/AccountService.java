@@ -1,11 +1,9 @@
 package com.ironhack.service;
 
 import com.ironhack.enums.Industry;
-import com.ironhack.enums.Product;
-import com.ironhack.enums.Status;
 import com.ironhack.model.Account;
 import com.ironhack.model.Opportunity;
-import com.ironhack.serialization.Serialization;
+import com.ironhack.serialize.SerializeService;
 import com.ironhack.userinput.UserInput;
 
 import java.util.ArrayList;
@@ -13,11 +11,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class AccountService extends MethodsService {
+public class AccountService {
     private static final Map<UUID, Account> accounts = new HashMap<>();
 
-    public static int nextId() {
-        return accounts.size();
+    static {
+        var objects = SerializeService.getAll();
+        objects.forEach((id, object) -> {
+            if(object instanceof Account) {
+                var account = (Account) object;
+                accounts.put(account.getId(), account);
+            }
+        });
     }
 
     public static Account createAccount(Opportunity opportunity) {
@@ -65,12 +69,8 @@ public class AccountService extends MethodsService {
     }
 
     public static void show() {
-        var objects = Serialization.getAll();
-        objects.forEach((id, object) -> {
-            if(object instanceof Account) {
-                var account = (Account) object;
-                System.out.println(account.getId() + " -> " + account.getCompanyName());
-            }
+        accounts.forEach((id, account) -> {
+            System.out.println(account.getId() + " -> " + account.getCompanyName());
         });
     }
 
@@ -79,20 +79,12 @@ public class AccountService extends MethodsService {
         System.out.println(account.getId() + " -> " + account.getCompanyName());
     }
 
-    public static void delete(UUID id) {
-        Serialization.delete(id);
-    }
-
-    public static <T> void delete(T account) {
-        Serialization.delete((Account) account);
-    }
-
     public static Account getById(UUID id) {
         return accounts.get(id);
     }
 
     public static void put(Account account) {
         accounts.put(account.getId(), account);
-        Serialization.put(account);
+        SerializeService.put(account);
     }
 }
