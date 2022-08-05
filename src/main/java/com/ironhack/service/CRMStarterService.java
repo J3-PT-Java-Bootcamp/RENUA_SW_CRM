@@ -49,21 +49,21 @@ public class CRMStarterService {
 
                 // Lookup commands
                 new Command<>("lookup lead :id", CommandType.LOOKUP_LEAD_ID).addOnRun((cr) -> {
-                    LeadService.show(cr.getIntegerParameter("id"));
+                    LeadService.show(cr.getUuidParameter("id"));
                 }),
                 new Command<>("lookup contact :id", CommandType.LOOKUP_CONTACT_ID).addOnRun((cr) -> {
-                    ContactService.show(cr.getIntegerParameter("id"));
+                    ContactService.show(cr.getUuidParameter("id"));
                 }),
                 new Command<>("lookup opportunity :id", CommandType.LOOKUP_OPPORTUNITY_ID).addOnRun((cr) -> {
-                    OpportunityService.show(cr.getIntegerParameter("id"));
+                    OpportunityService.show(cr.getUuidParameter("id"));
                 }),
                 new Command<>("lookup account :id", CommandType.LOOKUP_ACCOUNT_ID).addOnRun((cr) -> {
-                    AccountService.show(cr.getIntegerParameter("id"));
+                    AccountService.show(cr.getUuidParameter("id"));
                 }),
 
                 // Lead commands
                 new Command<>("convert :id", CommandType.CONVERT_LEAD).addOnRun((cr) -> {
-                    LeadService.convertLeadToOpportunity(cr.getIntegerParameter("id"));
+                    LeadService.convertLeadToOpportunity(cr.getUuidParameter("id"));
                 }),
                 new Command<>("new lead", CommandType.NEW_LEAD).addOnRun((cr) -> {
                     LeadService.createLead();
@@ -71,10 +71,10 @@ public class CRMStarterService {
 
                 // Change opportunity status commands
                 new Command<>("close-lost :id", CommandType.CLOSE_LOST).addOnRun((cr) -> {
-                    OpportunityService.updateStatus(cr.getIntegerParameter("id"), Status.CLOSED_LOST);
+                    OpportunityService.updateStatus(cr.getUuidParameter("id"), Status.CLOSED_LOST);
                 }),
                 new Command<>("close-won :id", CommandType.CLOSE_WON).addOnRun((cr) -> {
-                    OpportunityService.updateStatus(cr.getIntegerParameter("id"), Status.CLOSED_WON);
+                    OpportunityService.updateStatus(cr.getUuidParameter("id"), Status.CLOSED_WON);
                 }),
         });
 
