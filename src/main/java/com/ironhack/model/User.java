@@ -1,8 +1,6 @@
 package com.ironhack.model;
 
-import com.ironhack.serialization.Serialize;
-
-import java.io.Serializable;
+import com.ironhack.serialize.Serialize;
 
 public abstract class User extends Serialize {
 

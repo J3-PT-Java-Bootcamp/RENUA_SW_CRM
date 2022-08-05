@@ -1,4 +1,4 @@
-package com.ironhack.serialization;
+package com.ironhack.serialize;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;

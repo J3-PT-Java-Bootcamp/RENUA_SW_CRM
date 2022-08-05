@@ -1,22 +1,21 @@
-package com.ironhack.serialization;
+package com.ironhack.serialize;
 
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class Serialization<T> {
+public class SerializeService<T> {
 
     // Creating a map of the file names and the file paths.
-    private final static String DATABASE = "src/main/java/com/ironhack/serialization/serialised-data.txt";
-
+    private final static String DATABASE = "src/main/java/com/ironhack/serialize/serialised-data.txt";
 
     /**
      * Save the data into a file using Serialization.
      *
      * @param map the Map<UUID, Object> to save.
      */
-    public static void save(Map<UUID, Object> map) {
+    private static void save(Map<UUID, Object> map) {
 
         try (FileOutputStream fos = new FileOutputStream(DATABASE);
              ObjectOutputStream oos = new ObjectOutputStream(fos);) {
@@ -35,7 +34,7 @@ public class Serialization<T> {
      *
      * @return converted Map<UUID, Object> object.
      */
-    public static Map<UUID, Object> read() throws FileNotFoundException {
+    private static Map<UUID, Object> read() throws FileNotFoundException {
         Map<UUID, Object> map = null;
 
         try (FileInputStream fis = new FileInputStream(DATABASE); ObjectInputStream ois = new ObjectInputStream(fis);) {

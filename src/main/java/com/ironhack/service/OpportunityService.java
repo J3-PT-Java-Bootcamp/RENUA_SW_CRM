@@ -3,16 +3,27 @@ package com.ironhack.service;
 import com.ironhack.enums.Product;
 import com.ironhack.enums.Status;
 import com.ironhack.model.*;
-import com.ironhack.serialization.Serialization;
+import com.ironhack.serialize.SerializeService;
 import com.ironhack.userinput.UserInput;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class OpportunityService extends MethodsService {
+public class OpportunityService {
 
     private static final Map<UUID, Opportunity> opportunities = new HashMap<>();
+
+    static {
+        var objects = SerializeService.getAll();
+        objects.forEach((id, object) -> {
+            if(object instanceof Opportunity) {
+                var opportunity = (Opportunity) object;
+                opportunities.put(opportunity.getId(), opportunity);
+            }
+        });
+    }
+
     public static Opportunity createOpportunity(Lead lead) {
         System.out.print("\nWrite product number:\n");
 
@@ -38,29 +49,15 @@ public class OpportunityService extends MethodsService {
         return opportunity;
     }
 
-    public static int nextId() {
-        return opportunities.size();
-    }
-
-    public void updateCloseLostStatus(UUID id) {
+    public static void  updateStatus(UUID id, Status status) {
         var opportunity = getById(id);
-        opportunity.setStatus(Status.CLOSED_LOST);
-        // TODO: Implement save method
-    }
-
-    public void updateCloseWonStatus(UUID id) {
-        var opportunity = getById(id);
-        opportunity.setStatus(Status.CLOSED_WON);
-        // TODO: Implement save method
+        opportunity.setStatus(status);
+        put(opportunity);
     }
 
     public static void show() {
-        var objects = Serialization.getAll();
-        objects.forEach((id, object) -> {
-            if(object instanceof Opportunity) {
-                var opportunity = (Opportunity) object;
-                System.out.println(opportunity.getId() + " -> " + opportunity.getStatus());
-            }
+        opportunities.forEach((id, opportunity) -> {
+            System.out.println(opportunity.getId() + " -> " + opportunity.getStatus());
         });
     }
 
@@ -69,20 +66,12 @@ public class OpportunityService extends MethodsService {
         System.out.println(opportunity.getId() + " -> " + opportunity.getStatus());
     }
 
-    public static void delete(UUID id) {
-        Serialization.delete(id);
-    }
-
-    public static <T> void delete(T opportunity) {
-        Serialization.delete((Opportunity) opportunity);
-    }
-
     public static Opportunity getById(UUID id) {
         return opportunities.get(id);
     }
 
     public static void put(Opportunity opportunity) {
         opportunities.put(opportunity.getId(), opportunity);
-        Serialization.put(opportunity);
+        SerializeService.put(opportunity);
     }
 }

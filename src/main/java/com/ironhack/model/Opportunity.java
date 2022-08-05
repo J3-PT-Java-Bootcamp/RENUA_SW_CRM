@@ -2,10 +2,8 @@ package com.ironhack.model;
 
 import com.ironhack.enums.Product;
 import com.ironhack.enums.Status;
-import com.ironhack.serialization.Serialize;
-import com.ironhack.service.OpportunityService;
+import com.ironhack.serialize.Serialize;
 
-import java.io.Serializable;
 import java.util.UUID;
 
 public class Opportunity extends Serialize {

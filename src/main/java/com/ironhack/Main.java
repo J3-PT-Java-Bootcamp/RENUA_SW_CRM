@@ -2,6 +2,7 @@ package com.ironhack;
 
 import com.ironhack.commander.*;
 import com.ironhack.enums.CommandType;
+import com.ironhack.enums.Status;
 import com.ironhack.service.AccountService;
 import com.ironhack.service.ContactService;
 import com.ironhack.service.LeadService;
@@ -15,6 +16,7 @@ public class Main {
 
         final var commander = new Commander<CommandType>(new Command[] {
 
+            // General commands
             new Command<>("exit", CommandType.EXIT),
             new Command<>("help", CommandType.HELP).addOnRun((cr) -> {
                 System.out.println("\nAvailable commands:");
@@ -31,10 +33,6 @@ public class Main {
                 System.out.println("\t11. close-lost :id - Close an opportunity as lost by id");
                 System.out.println("\t11. close-won :id - Close an opportunity as won by id");
                 System.out.println("\t12. exit - Exit the program");
-            }),
-
-            new Command<>("new lead", CommandType.NEW_LEAD).addOnRun((cr) -> {
-                LeadService.createLead();
             }),
 
             // Show commands
@@ -65,15 +63,20 @@ public class Main {
                 AccountService.show(cr.getIntegerParameter("id"));
             }),
 
-
+            // Lead commands
             new Command<>("convert :id", CommandType.CONVERT_LEAD).addOnRun((cr) -> {
                 LeadService.convertLeadToOpportunity(cr.getIntegerParameter("id"));
             }),
+            new Command<>("new lead", CommandType.NEW_LEAD).addOnRun((cr) -> {
+                LeadService.createLead();
+            }),
+
+            // Change opportunity status commands
             new Command<>("close-lost :id", CommandType.CLOSE_LOST).addOnRun((cr) -> {
-                // TODO: Close lead as lost
+                OpportunityService.updateStatus(cr.getIntegerParameter("id"), Status.CLOSED_LOST);
             }),
             new Command<>("close-won :id", CommandType.CLOSE_WON).addOnRun((cr) -> {
-                // TODO: Close lead as won
+                OpportunityService.updateStatus(cr.getIntegerParameter("id"), Status.CLOSED_WON);
             }),
         });
 

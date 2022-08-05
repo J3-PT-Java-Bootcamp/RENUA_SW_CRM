@@ -1,27 +1,24 @@
 package com.ironhack.service;
 
 import com.ironhack.model.Lead;
-import com.ironhack.serialization.Serialization;
+import com.ironhack.serialize.SerializeService;
 import com.ironhack.userinput.UserInput;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class LeadService extends MethodsService {
+public class LeadService {
     private static Map<UUID, Lead> leads = new HashMap<>();
 
     static {
-        var objects = Serialization.getAll();
+        var objects = SerializeService.getAll();
         objects.forEach((id, object) -> {
             if(object instanceof Lead) {
                 var lead = (Lead) object;
                 leads.put(lead.getId(), lead);
             }
         });
-    }
-    public static int nextId() {
-        return leads.size();
     }
 
     public static Lead createLead() {
@@ -49,16 +46,13 @@ public class LeadService extends MethodsService {
         final var lead = getById(id);
         delete(lead);
         var opportunity = OpportunityService.createOpportunity(lead);
-        var account = AccountService.createAccount(opportunity);
+        System.out.print("\nNow create the account for the opportunity: " + opportunity.getId() + "\n");
+        AccountService.createAccount(opportunity);
     }
 
     public static void show() {
-        var objects = Serialization.getAll();
-        objects.forEach((id, object) -> {
-            if(object instanceof Lead) {
-                var lead = (Lead) object;
-                System.out.println(lead.getId() + " -> " + lead.getName());
-            }
+        leads.forEach((id, lead) -> {
+            System.out.println(lead.getId() + " -> " + lead.getName());
         });
     }
 
@@ -67,14 +61,9 @@ public class LeadService extends MethodsService {
         System.out.println(lead.getId() + " -> " + lead.getName());
     }
 
-    public static void delete(UUID id) {
-        leads.remove(id);
-        Serialization.delete(id);
-    }
-
     public static <T> void delete(T lead) {
         leads.remove(((Lead) lead).getId());
-        Serialization.delete((Lead) lead);
+        SerializeService.delete((Lead) lead);
     }
 
     public static Lead getById(UUID id) {
@@ -83,6 +72,6 @@ public class LeadService extends MethodsService {
 
     public static void put(Lead lead) {
         leads.put(lead.getId(), lead);
-        Serialization.put(lead);
+        SerializeService.put(lead);
     }
 }
