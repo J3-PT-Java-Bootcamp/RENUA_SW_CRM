@@ -22,6 +22,7 @@ public class LeadService extends MethodsService {
     public static int nextId() {
         return leads.size();
     }
+
     public static Lead createLead() {
         System.out.print("\nLead name: ");
         final String name = UserInput.readText();

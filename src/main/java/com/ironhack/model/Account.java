@@ -7,7 +7,7 @@ import com.ironhack.service.AccountService;
 import java.io.Serializable;
 import java.util.List;
 
-public class Account extends Serialize implements Serializable {
+public class Account extends Serialize {
 
     private Industry industry;
     private int employeeCount;
@@ -18,7 +18,7 @@ public class Account extends Serialize implements Serializable {
     private List<Integer> opportunityList;
 
     static {
-        serialVersionUID = 4L; // No modify
+        serialVersionUID = 5L; // No modify
     }
 
     public Account(Industry industry, int employeeCount, String city, String country, String companyName, List<Integer> contactList, List<Integer> opportunityList) {

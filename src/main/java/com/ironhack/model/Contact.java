@@ -4,10 +4,10 @@ import com.ironhack.service.ContactService;
 
 import java.io.Serializable;
 
-public class Contact extends User implements Serializable {
+public class Contact extends User {
 
     static {
-        serialVersionUID = 2L; // No modify
+        serialVersionUID = 4L; // No modify
     }
 
     public  Contact(Lead lead) {

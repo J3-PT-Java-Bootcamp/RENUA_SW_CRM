@@ -2,14 +2,15 @@ package com.ironhack.serialization;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
-public abstract class Serialize {
+public abstract class Serialize implements Serializable {
     // Serial version ID
     protected static long serialVersionUID;
     protected int id;
 
     static {
-        serialVersionUID = 00000L;
+        serialVersionUID = 0L; // No modify
     }
 
     public Serialize(int id) {
