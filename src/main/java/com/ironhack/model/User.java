@@ -51,4 +51,14 @@ public abstract class User extends Serialize {
     public void setCompanyName(String companyName) {
         this.companyName = companyName;
     }
+
+    public String toString(String className) {
+        return className+"{" +  "\n" +
+                "  id=" + id +  "\n" +
+                "  name='" + name + '\'' +  "\n" +
+                "  phoneNumber='" + phoneNumber + '\'' +  "\n" +
+                "  email='" + email + '\'' +  "\n" +
+                "  companyName='" + companyName + '\'' +  "\n" +
+                "}";
+    }
 }

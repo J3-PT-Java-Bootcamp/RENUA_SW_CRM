@@ -52,13 +52,13 @@ public class LeadService {
 
     public static void show() {
         leads.forEach((id, lead) -> {
-            System.out.println(lead.getId() + " -> " + lead.getName());
+            System.out.println(lead.toString("Lead"));
         });
     }
 
     public static void show(UUID id) {
         final var lead = getById(id);
-        System.out.println(lead.getId() + " -> " + lead.getName());
+        System.out.println(lead.toString("Lead"));
     }
 
     public static <T> void delete(T lead) {

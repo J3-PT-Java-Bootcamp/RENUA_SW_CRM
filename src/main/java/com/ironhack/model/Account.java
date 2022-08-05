@@ -85,4 +85,18 @@ public class Account extends Serialize {
     public void setOpportunityList(List<UUID> opportunityList) {
         this.opportunityList = opportunityList;
     }
+
+    @Override
+    public String toString() {
+        return "Account{" + "\n" +
+                " id=" + id + "\n" +
+                " industry=" + industry + "\n" +
+                " employeeCount=" + employeeCount + "\n" +
+                " city='" + city + '\'' + "\n" +
+                " country='" + country + '\'' + "\n" +
+                " companyName='" + companyName + '\'' + "\n" +
+                " contactList=" + contactList + "\n" +
+                " opportunityList=" + opportunityList + "\n" +
+                '}';
+    }
 }

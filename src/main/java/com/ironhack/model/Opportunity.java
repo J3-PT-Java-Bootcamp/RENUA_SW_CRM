@@ -55,4 +55,15 @@ public class Opportunity extends Serialize {
     public void setStatus(Status status) {
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return "Opportunity{" +  "\n" +
+                "  id=" + id +  "\n" +
+                "  product=" + product +  "\n" +
+                "  quantity=" + quantity +  "\n" +
+                "  decisionMaker=" + decisionMaker +  "\n" +
+                "  status=" + status +  "\n" +
+                "  }";
+    }
 }
