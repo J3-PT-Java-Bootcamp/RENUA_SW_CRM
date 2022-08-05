@@ -15,8 +15,7 @@ public abstract class User extends Serialize {
         serialVersionUID = 1L; // No modify
     }
 
-    public User(int id, String name, String phoneNumber, String email, String companyName) {
-        super(id);
+    public User(String name, String phoneNumber, String email, String companyName) {
         setName(name);
         setPhoneNumber(phoneNumber);
         setEmail(email);

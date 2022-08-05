@@ -5,9 +5,10 @@ import com.ironhack.serialization.Serialization;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 public class ContactService extends MethodsService {
-    private static final Map<Integer, Contact> contacts = new HashMap<>();
+    private static final Map<UUID, Contact> contacts = new HashMap<>();
     
     public static int nextId() {
         return contacts.size();
@@ -28,7 +29,7 @@ public class ContactService extends MethodsService {
         System.out.println(contact.getId() + " -> " + contact.getName());
     }
 
-    public static void delete(int id) {
+    public static void delete(UUID id) {
         Serialization.delete(id);
     }
 

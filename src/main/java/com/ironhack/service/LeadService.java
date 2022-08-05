@@ -6,9 +6,10 @@ import com.ironhack.userinput.UserInput;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 public class LeadService extends MethodsService {
-    private static Map<Integer, Lead> leads = new HashMap<>();
+    private static Map<UUID, Lead> leads = new HashMap<>();
 
     static {
         var objects = Serialization.getAll();
@@ -38,14 +39,13 @@ public class LeadService extends MethodsService {
 
         final var lead = new Lead(name, leadPn, companyName, leadEmail);
 
-//        leads.put(lead.getId(), lead);
-        Serialization.put(lead);
         leads.put(lead.getId(), lead);
+        Serialization.put(lead);
 
         return lead;
     }
 
-    public static void convertLeadToOpportunity(int id) {
+    public static void convertLeadToOpportunity(UUID id) {
         final var lead = getById(id);
         delete(lead);
         OpportunityService.createFromLead(lead);
@@ -61,12 +61,12 @@ public class LeadService extends MethodsService {
         });
     }
 
-    public static void show(int id) {
+    public static void show(UUID id) {
         final var lead = getById(id);
         System.out.println(lead.getId() + " -> " + lead.getName());
     }
 
-    public static void delete(int id) {
+    public static void delete(UUID id) {
         Serialization.delete(id);
     }
 
@@ -74,7 +74,7 @@ public class LeadService extends MethodsService {
         Serialization.delete((Lead) lead);
     }
 
-    public static Lead getById(int id) {
+    public static Lead getById(UUID id) {
         return leads.get(id);
     }
 }

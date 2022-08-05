@@ -3,6 +3,7 @@ package com.ironhack.serialization;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 public class Serialization<T> {
 
@@ -11,11 +12,11 @@ public class Serialization<T> {
 
 
     /**
-     * Save a student into a file using Serialization.
+     * Save the data into a file using Serialization.
      *
-     * @param map the Map<Integer, Object> to save.
+     * @param map the Map<UUID, Object> to save.
      */
-    public static void save(Map<Integer, Object> map) {
+    public static void save(Map<UUID, Object> map) {
 
         try (FileOutputStream fos = new FileOutputStream(DATABASE);
              ObjectOutputStream oos = new ObjectOutputStream(fos);) {
@@ -24,29 +25,29 @@ public class Serialization<T> {
             // Error in accessing the file
             e.printStackTrace();
         } catch (IOException e) {
-            // Error in converting the Student
+            // Error in converting the Map
             e.printStackTrace();
         }
     }
 
     /**
-     * Reading Student object from the given file.
+     * Reading data object from the given file.
      *
-     * @return converted Map<Integer, Object> object.
+     * @return converted Map<UUID, Object> object.
      */
-    public static Map<Integer, Object> read() throws FileNotFoundException {
-        Map<Integer, Object> map = null;
+    public static Map<UUID, Object> read() throws FileNotFoundException {
+        Map<UUID, Object> map = null;
 
         try (FileInputStream fis = new FileInputStream(DATABASE); ObjectInputStream ois = new ObjectInputStream(fis);) {
-            map = (Map<Integer, Object>) ois.readObject();
+            map = (Map<UUID, Object>) ois.readObject();
         } catch (FileNotFoundException e) {
             // Error in accessing the file
             return new HashMap<>();
         } catch (IOException e) {
-            // Error in converting the Student
-            e.printStackTrace();
+            // Error in converting the Map
+            return new HashMap<>();
         } catch (ClassNotFoundException e) {
-            // You are converting an invalid stream to Student
+            // You are converting an invalid stream to Map
             e.printStackTrace();
         }
         return map;
@@ -58,8 +59,8 @@ public class Serialization<T> {
      * @param id The id of the object you want to get.
      * @return The object with the given id.
      */
-    public static Object getById(int id) {
-        Map<Integer, Object> map;
+    public static Object getById(UUID id) {
+        Map<UUID, Object> map;
 
         try {
             map = read();
@@ -75,8 +76,8 @@ public class Serialization<T> {
      *
      * @return A map of the contents of the file.
      */
-    public static Map<Integer, Object> getAll() {
-        Map<Integer, Object> map;
+    public static Map<UUID, Object> getAll() {
+        Map<UUID, Object> map;
 
         try {
             map = read();
@@ -95,7 +96,7 @@ public class Serialization<T> {
      */
     public static void put(Serialize object) {
 
-        Map<Integer, Object> map;
+        Map<UUID, Object> map;
 
         try {
             map = read();
@@ -117,7 +118,7 @@ public class Serialization<T> {
      * @param object the object to be replaced
      */
     public static void replace(Serialize object) {
-        Map<Integer, Object> map;
+        Map<UUID, Object> map;
 
         try {
             map = read();
@@ -135,7 +136,7 @@ public class Serialization<T> {
      * @param object The object to be deleted.
      */
     public static void delete(Serialize object) {
-        Map<Integer, Object> map;
+        Map<UUID, Object> map;
 
         try {
             map = read();
@@ -152,8 +153,8 @@ public class Serialization<T> {
      *
      * @param id The id of the object you want to delete.
      */
-    public static void delete(int id) {
-        Map<Integer, Object> map;
+    public static void delete(UUID id) {
+        Map<UUID, Object> map;
 
         try {
             map = read();
