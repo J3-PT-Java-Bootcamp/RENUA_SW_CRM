@@ -40,4 +40,9 @@ public class ContactService extends MethodsService {
     public static Contact getById(UUID id) {
         return contacts.get(id);
     }
+
+    public static void put(Contact contact) {
+        contacts.put(contact.getId(), contact);
+        Serialization.put(contact);
+    }
 }

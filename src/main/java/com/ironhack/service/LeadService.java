@@ -38,9 +38,9 @@ public class LeadService extends MethodsService {
         final String companyName = UserInput.readText();
 
         final var lead = new Lead(name, leadPn, companyName, leadEmail);
+        put(lead);
 
-        leads.put(lead.getId(), lead);
-        Serialization.put(lead);
+        System.out.print("\nLead created: " + lead.getId());
 
         return lead;
     }
@@ -48,7 +48,8 @@ public class LeadService extends MethodsService {
     public static void convertLeadToOpportunity(UUID id) {
         final var lead = getById(id);
         delete(lead);
-        OpportunityService.createFromLead(lead);
+        var opportunity = OpportunityService.createOpportunity(lead);
+        var account = AccountService.createAccount(opportunity);
     }
 
     public static void show() {
@@ -67,14 +68,21 @@ public class LeadService extends MethodsService {
     }
 
     public static void delete(UUID id) {
+        leads.remove(id);
         Serialization.delete(id);
     }
 
     public static <T> void delete(T lead) {
+        leads.remove(((Lead) lead).getId());
         Serialization.delete((Lead) lead);
     }
 
     public static Lead getById(UUID id) {
         return leads.get(id);
+    }
+
+    public static void put(Lead lead) {
+        leads.put(lead.getId(), lead);
+        Serialization.put(lead);
     }
 }
