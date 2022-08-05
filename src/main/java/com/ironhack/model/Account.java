@@ -8,25 +8,21 @@ import java.util.List;
 
 public class Account extends Serialize implements Serializable {
 
+    private int id;
     private Industry industry;
     private int employeeCount;
     private String city;
     private String country;
-    private String companyName; // This attribute can be removed; it appears in one place in the exercise description and not in another.
-    private List<Integer> contactList;
-    private List<Integer> opportunityList;
+    private List<Contact> contactList;
+    private List<Opportunity> opportunityList;
 
-    static {
-        serialVersionUID = 4L; // No modify
-    }
-
-    public Account(int id, Industry industry, int employeeCount, String city, String country, String companyName, List<Integer> contactList, List<Integer> opportunityList) {
+    public Account(int id, Industry industry, int employeeCount, String city, String country, List<Contact> contactList, List<Opportunity> opportunityList) {
         super(id);
+        this.id = id;
         this.industry = industry;
         this.employeeCount = employeeCount;
         this.city = city;
         this.country = country;
-        this.companyName = companyName;
         this.contactList = contactList;
         this.opportunityList = opportunityList;
     }
@@ -63,27 +59,32 @@ public class Account extends Serialize implements Serializable {
         this.country = country;
     }
 
-    public String getCompanyName() {
-        return companyName;
-    }
-
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
-    }
-
-    public List<Integer> getContactList() {
+    public List<Contact> getContactList() {
         return contactList;
     }
 
-    public void setContactList(List<Integer> contactList) {
+    public void setContactList(List<Contact> contactList) {
         this.contactList = contactList;
     }
 
-    public List<Integer> getOpportunityList() {
+    public List<Opportunity> getOpportunityList() {
         return opportunityList;
     }
 
-    public void setOpportunityList(List<Integer> opportunityList) {
+    public void setOpportunityList(List<Opportunity> opportunityList) {
         this.opportunityList = opportunityList;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" + "\n" +
+                " id=" + id +  "\n" +
+                " industry=" + industry + "\n" +
+                " employeeCount=" + employeeCount + "\n" +
+                " city='" + city + '\'' + "\n" +
+                " country='" + country + '\'' + "\n" +
+                " contactList=" + contactList + "\n" +
+                " opportunityList=" + opportunityList + "\n" +
+                '}';
     }
 }

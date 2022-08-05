@@ -11,7 +11,7 @@ public abstract class User extends Serialize implements Serializable {
     protected String email;
     protected String companyName;
 
-    public User(int id, String name, String phoneNumber, String email, String companyName) {
+    public User(int id, String name, String phoneNumber, String companyName, String email) {
         super(id);
         setName(name);
         setPhoneNumber(phoneNumber);

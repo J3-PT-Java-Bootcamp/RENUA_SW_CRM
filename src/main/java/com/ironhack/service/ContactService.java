@@ -1,49 +1,27 @@
 package com.ironhack.service;
 
-import com.ironhack.interfaces.ServiceMethods;
 import com.ironhack.model.Contact;
-import com.ironhack.serialization.Serialization;
-import com.ironhack.serialization.Serialize;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
-public class ContactService implements ServiceMethods {
-    private static final Map<Integer, Contact> contacts = new HashMap<>();
-    
-    public static int nextId() {
-        return contacts.size();
+public class ContactService {
+    public static List<Contact> contacts = new ArrayList<>();
+
+    private static AtomicInteger nextContactId = new AtomicInteger(0);
+
+    public static Contact createContact(String name, String phoneNumber, String email, String companyName) {
+        return new Contact(nextContactId.incrementAndGet(), name, phoneNumber, companyName, email);
     }
 
-    @Override
-    public void show() {
-        var objects = Serialization.getAll();
-        objects.forEach((id, object) -> {
-            if(object instanceof Contact) {
-                var contact = (Contact) object;
-                System.out.println(contact.getId() + " -> " + contact.getName());
-            }
-        });
+    public static void addContact(Contact contact) {
+        contacts.add(contact);
     }
 
-    @Override
-    public void show(int id) {
-        final var contact = getById(id);
-        System.out.println(contact.getId() + " -> " + contact.getName());
-    }
-
-    @Override
-    public void delete(int id) {
-        Serialization.delete(id);
-    }
-
-    @Override
-    public <T> void delete(T contact) {
-        Serialization.delete((Contact) contact);
-    }
-
-    @Override
-    public Contact getById(int id) {
-        return contacts.get(id);
+    public static void showContacts() {
+        for (Contact contact : contacts) {
+            System.out.println(contact.toString());
+        }
     }
 }

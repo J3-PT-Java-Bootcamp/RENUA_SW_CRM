@@ -1,16 +1,25 @@
 package com.ironhack.model;
 
-import com.ironhack.service.ContactService;
-
 import java.io.Serializable;
+import java.util.Map;
 
 public class Contact extends User implements Serializable {
+    private int id;
 
-    static {
-        serialVersionUID = 2L; // No modify
+    public Contact(int id, String name, String phoneNumber, String companyName, String email) {
+        super(id, name, phoneNumber, companyName, email);
+        //productsOfInterest.put(productName, quantity);
+        this.id = id;
     }
 
-    public  Contact(Lead lead) {
-        super(ContactService.nextId(), lead.name, lead.phoneNumber, lead.email, lead.companyName);
+    @Override
+    public String toString() {
+        return "Contact{" + "\n" +
+                "    id=" + id + "\n" +
+                "    name='" + name + '\'' + "\n" +
+                "    phoneNumber='" + phoneNumber + '\'' + "\n" +
+                "    email='" + email + '\'' + "\n" +
+                "    companyName='" + companyName + '\'' + "\n" +
+                "  }";
     }
 }

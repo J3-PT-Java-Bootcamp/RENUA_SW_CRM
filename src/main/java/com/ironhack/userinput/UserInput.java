@@ -8,6 +8,11 @@ public class UserInput {
         return new Scanner(System.in).nextLine();
     }
 
+    public static Integer readInt() {
+        System.out.print("\n~$ ");
+        return new Scanner(System.in).nextInt();
+    }
+
     public static int getIntBetween(int min, int max) {
         final var scanner = new Scanner(System.in);
         do {

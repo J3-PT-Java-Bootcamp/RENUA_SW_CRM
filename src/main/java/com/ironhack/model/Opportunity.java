@@ -8,22 +8,23 @@ import com.ironhack.service.OpportunityService;
 import java.io.Serializable;
 
 public class Opportunity extends Serialize implements Serializable {
-
-    private Product product;
+    private int id;
+    private Product productOfInterest;
     private int quantity;
-    private int decisionMaker;
+    private Contact decisionMaker;
     private Status status;
 
-    static {
-        serialVersionUID = 3L; // No modify
-    }
-
-    public Opportunity(Product product, int quantity, int decisionMaker, Status status) {
+    public Opportunity(int id, Product product, int quantity, Contact decisionMaker, Status status) {
         super(OpportunityService.nextId());
+        setId(id);
         setProduct(product);
         setQuantity(quantity);
         setDecisionMaker(decisionMaker);
         setStatus(status);
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getId() {
@@ -31,11 +32,11 @@ public class Opportunity extends Serialize implements Serializable {
     }
 
     public Product getProduct() {
-        return product;
+        return productOfInterest;
     }
 
     public void setProduct(Product product) {
-        this.product = product;
+        this.productOfInterest = product;
     }
 
     public int getQuantity() {
@@ -46,11 +47,11 @@ public class Opportunity extends Serialize implements Serializable {
         this.quantity = quantity;
     }
 
-    public int getDecisionMaker() {
+    public Contact getDecisionMaker() {
         return decisionMaker;
     }
 
-    public void setDecisionMaker(int decisionMaker) {
+    public void setDecisionMaker(Contact decisionMaker) {
         this.decisionMaker = decisionMaker;
     }
 
@@ -60,5 +61,16 @@ public class Opportunity extends Serialize implements Serializable {
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "Opportunity{" + "\n" +
+                "  id=" + id + "\n" +
+                "  productOfInterest=" + productOfInterest + "\n" +
+                "  quantity=" + quantity + "\n" +
+                "  decisionMaker=" + decisionMaker + "\n" +
+                "  status=" + status + "\n" +
+                "  }";
     }
 }
