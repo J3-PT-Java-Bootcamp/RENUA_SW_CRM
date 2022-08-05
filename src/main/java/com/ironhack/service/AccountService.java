@@ -24,7 +24,7 @@ public class AccountService extends MethodsService {
         });
     }
 
-    public static void show(int id) {
+    public static void show(UUID id) {
         final var account = getById(id);
         System.out.println(account.getId() + " -> " + account.getCompanyName());
     }
@@ -37,7 +37,7 @@ public class AccountService extends MethodsService {
         Serialization.delete((Account) account);
     }
 
-    public static Account getById(int id) {
+    public static Account getById(UUID id) {
         return accounts.get(id);
     }
 }

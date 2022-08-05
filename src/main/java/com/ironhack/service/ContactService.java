@@ -24,7 +24,7 @@ public class ContactService extends MethodsService {
         });
     }
 
-    public static void show(int id) {
+    public static void show(UUID id) {
         final var contact = getById(id);
         System.out.println(contact.getId() + " -> " + contact.getName());
     }
@@ -37,7 +37,7 @@ public class ContactService extends MethodsService {
         Serialization.delete((Contact) contact);
     }
 
-    public static Contact getById(int id) {
+    public static Contact getById(UUID id) {
         return contacts.get(id);
     }
 }
