@@ -3,21 +3,22 @@ package com.ironhack.serialization;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.UUID;
 
 public abstract class Serialize implements Serializable {
     // Serial version ID
     protected static long serialVersionUID;
-    protected int id;
+    protected UUID id;
 
     static {
         serialVersionUID = 0L; // No modify
     }
 
-    public Serialize(int id) {
-        this.id = id;
+    public Serialize() {
+        this.id = UUID.randomUUID();
     }
 
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 

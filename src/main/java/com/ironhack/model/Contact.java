@@ -11,6 +11,6 @@ public class Contact extends User {
     }
 
     public  Contact(Lead lead) {
-        super(ContactService.nextId(), lead.name, lead.phoneNumber, lead.email, lead.companyName);
+        super(lead.name, lead.phoneNumber, lead.email, lead.companyName);
     }
 }

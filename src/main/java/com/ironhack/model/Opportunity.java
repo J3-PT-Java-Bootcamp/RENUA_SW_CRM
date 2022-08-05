@@ -6,28 +6,24 @@ import com.ironhack.serialization.Serialize;
 import com.ironhack.service.OpportunityService;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 public class Opportunity extends Serialize {
 
     private Product product;
     private int quantity;
-    private int decisionMaker;
+    private UUID decisionMaker;
     private Status status;
 
     static {
         serialVersionUID = 2L; // No modify
     }
 
-    public Opportunity(Product product, int quantity, int decisionMaker, Status status) {
-        super(OpportunityService.nextId());
+    public Opportunity(Product product, int quantity, UUID decisionMaker, Status status) {
         setProduct(product);
         setQuantity(quantity);
         setDecisionMaker(decisionMaker);
         setStatus(status);
-    }
-
-    public int getId() {
-        return id;
     }
 
     public Product getProduct() {
@@ -46,11 +42,11 @@ public class Opportunity extends Serialize {
         this.quantity = quantity;
     }
 
-    public int getDecisionMaker() {
+    public UUID getDecisionMaker() {
         return decisionMaker;
     }
 
-    public void setDecisionMaker(int decisionMaker) {
+    public void setDecisionMaker(UUID decisionMaker) {
         this.decisionMaker = decisionMaker;
     }
 

@@ -6,6 +6,7 @@ import com.ironhack.service.AccountService;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.UUID;
 
 public class Account extends Serialize {
 
@@ -14,15 +15,14 @@ public class Account extends Serialize {
     private String city;
     private String country;
     private String companyName; // This attribute can be removed; it appears in one place in the exercise description and not in another.
-    private List<Integer> contactList;
-    private List<Integer> opportunityList;
+    private List<UUID> contactList;
+    private List<UUID> opportunityList;
 
     static {
         serialVersionUID = 5L; // No modify
     }
 
-    public Account(Industry industry, int employeeCount, String city, String country, String companyName, List<Integer> contactList, List<Integer> opportunityList) {
-        super(AccountService.nextId());
+    public Account(Industry industry, int employeeCount, String city, String country, String companyName, List<UUID> contactList, List<UUID> opportunityList) {
         this.industry = industry;
         this.employeeCount = employeeCount;
         this.city = city;
@@ -72,19 +72,19 @@ public class Account extends Serialize {
         this.companyName = companyName;
     }
 
-    public List<Integer> getContactList() {
+    public List<UUID> getContactList() {
         return contactList;
     }
 
-    public void setContactList(List<Integer> contactList) {
+    public void setContactList(List<UUID> contactList) {
         this.contactList = contactList;
     }
 
-    public List<Integer> getOpportunityList() {
+    public List<UUID> getOpportunityList() {
         return opportunityList;
     }
 
-    public void setOpportunityList(List<Integer> opportunityList) {
+    public void setOpportunityList(List<UUID> opportunityList) {
         this.opportunityList = opportunityList;
     }
 }
