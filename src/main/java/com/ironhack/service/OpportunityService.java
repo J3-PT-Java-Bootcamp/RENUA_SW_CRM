@@ -13,7 +13,7 @@ import java.util.UUID;
 public class OpportunityService extends MethodsService {
 
     private static final Map<UUID, Opportunity> opportunities = new HashMap<>();
-    public static Opportunity createFromLead(Lead lead) {
+    public static Opportunity createOpportunity(Lead lead) {
         System.out.print("\nWrite product number:\n");
 
         System.out.println("1: HYBRID");
@@ -22,14 +22,18 @@ public class OpportunityService extends MethodsService {
 
         Product product = new Product[] {Product.HYBRID, Product.FLATBED, Product.BOX}[UserInput.getIntBetween(1,3)];
 
-        System.out.print("\nNumber of trucks:");
+        System.out.print("\nNumber of trucks (Between 0 and 9999):\n");
         int trucksNum = UserInput.getIntBetween(0, 9999);
 
         var contact = new Contact(lead);
-        //TODO: implement put method in ContactService Serialization.put(contact)
+        ContactService.put(contact);
+
+        System.out.print("Contact created: " + contact.getId() + "\n");
 
         var opportunity = new Opportunity(product, trucksNum, contact.getId(), Status.OPEN);
-        Serialization.put(opportunity);
+        put(opportunity);
+
+        System.out.print("Opportunity created: " + opportunity.getId() + "\n");
 
         return opportunity;
     }
@@ -75,5 +79,10 @@ public class OpportunityService extends MethodsService {
 
     public static Opportunity getById(UUID id) {
         return opportunities.get(id);
+    }
+
+    public static void put(Opportunity opportunity) {
+        opportunities.put(opportunity.getId(), opportunity);
+        Serialization.put(opportunity);
     }
 }

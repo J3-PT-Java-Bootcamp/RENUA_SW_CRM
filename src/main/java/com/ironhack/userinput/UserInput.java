@@ -14,8 +14,9 @@ public class UserInput {
             try {
                 int number = scanner.nextInt();
                 if(number >= min && number <= max) return number;
-            } catch(Exception e) {}
-            System.out.println("[!] Invalid number");
+            } catch(Exception e) {
+                System.out.println("[!] Invalid number");
+            }
         } while(true);
     }
 }

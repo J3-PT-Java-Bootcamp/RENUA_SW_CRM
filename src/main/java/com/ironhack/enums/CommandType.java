@@ -1,13 +1,10 @@
 package com.ironhack.enums;
 
 public enum CommandType {
-    CREATE_LEAD,
     SHOW_LEADS,
     SHOW_CONTACTS,
     SHOW_OPPORTUNITIES,
     SHOW_ACCOUNTS,
-    CONVERT,
-    LOOKUP_LEAD,
     CLOSE_LOST,
     CLOSE_WON,
     NEW_LEAD,

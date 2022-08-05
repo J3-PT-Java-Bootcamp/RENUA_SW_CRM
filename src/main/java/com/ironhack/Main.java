@@ -9,13 +9,28 @@ import com.ironhack.service.OpportunityService;
 
 public class Main {
     public static void main(String[] args) {
-        final var commander = new Commander<CommandType>(new Command[] {
 
-            // TODO: Say hello to the user and inform him about the help command
+        System.out.println("Hello, welcome to the RENUA CRM!");
+        System.out.println("Type 'help' to see the available commands");
+
+        final var commander = new Commander<CommandType>(new Command[] {
 
             new Command<>("exit", CommandType.EXIT),
             new Command<>("help", CommandType.HELP).addOnRun((cr) -> {
-                // TODO: List in console all commands
+                System.out.println("\nAvailable commands:");
+                System.out.println("\t1. new lead - Create a new lead");
+                System.out.println("\t2. show leads - Show all leads");
+                System.out.println("\t3. show opportunities - Show all opportunities");
+                System.out.println("\t4. show accounts - Show all accounts");
+                System.out.println("\t5. show contacts - Show all contacts");
+                System.out.println("\t6. lookup lead :id - Show a lead by id");
+                System.out.println("\t7. lookup opportunity :id - Show an opportunity by id");
+                System.out.println("\t8. lookup account :id - Show an account by id");
+                System.out.println("\t9. lookup contact :id - Show a contact by id");
+                System.out.println("\t10. convert :id - Convert a lead to a contact related with an opportunity and an account by lead id");
+                System.out.println("\t11. close-lost :id - Close an opportunity as lost by id");
+                System.out.println("\t11. close-won :id - Close an opportunity as won by id");
+                System.out.println("\t12. exit - Exit the program");
             }),
 
             new Command<>("new lead", CommandType.NEW_LEAD).addOnRun((cr) -> {
@@ -49,15 +64,15 @@ public class Main {
             new Command<>("lookup account :id", CommandType.LOOKUP_ACCOUNT_ID).addOnRun((cr) -> {
                 AccountService.show(cr.getIntegerParameter("id"));
             }),
-                
+
 
             new Command<>("convert :id", CommandType.CONVERT_LEAD).addOnRun((cr) -> {
                 LeadService.convertLeadToOpportunity(cr.getIntegerParameter("id"));
             }),
-            new Command<>("close-lost :id", CommandType.CONVERT_LEAD).addOnRun((cr) -> {
+            new Command<>("close-lost :id", CommandType.CLOSE_LOST).addOnRun((cr) -> {
                 // TODO: Close lead as lost
             }),
-            new Command<>("close-won :id", CommandType.CONVERT_LEAD).addOnRun((cr) -> {
+            new Command<>("close-won :id", CommandType.CLOSE_WON).addOnRun((cr) -> {
                 // TODO: Close lead as won
             }),
         });
