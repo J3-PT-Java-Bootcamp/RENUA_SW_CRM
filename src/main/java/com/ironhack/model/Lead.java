@@ -13,6 +13,4 @@ public class Lead extends User {
     public Lead(String name, String phoneNumber, String email, String companyName) {
         super(LeadService.nextId(), name, phoneNumber, email, companyName);
     }
-
-    }
 }
