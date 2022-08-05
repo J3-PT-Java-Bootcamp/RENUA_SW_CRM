@@ -32,7 +32,7 @@ public class CommandResult<T> {
         return getParameters().get(key);
     }
 
-    public UUID getIntegerParameter(String key) {
+    public UUID getUuidParameter(String key) {
         return UUID.fromString((getParameters().get(key)));
     }
 }
