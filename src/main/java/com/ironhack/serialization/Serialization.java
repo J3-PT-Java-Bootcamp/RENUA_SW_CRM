@@ -11,45 +11,42 @@ public class Serialization<T> {
 
 
     /**
-     * It takes a map and a file name, and saves the map to the file using Serialization.
+     * Save a student into a file using Serialization.
      *
-     * @param map The map that you want to save.
+     * @param map the Map<Integer, Object> to save.
      */
-    private static void save(Map map) {
+    public static void save(Map<Integer, Object> map) {
 
-        try {
-            FileOutputStream fos = new FileOutputStream(DATABASE);
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
+        try (FileOutputStream fos = new FileOutputStream(DATABASE);
+             ObjectOutputStream oos = new ObjectOutputStream(fos);) {
             oos.writeObject(map);
         } catch (FileNotFoundException e) {
             // Error in accessing the file
             e.printStackTrace();
         } catch (IOException e) {
-            // Error in converting the Object to bytes
+            // Error in converting the Student
             e.printStackTrace();
         }
     }
 
     /**
-     * It reads the file and converts the bytes to an object
+     * Reading Student object from the given file.
      *
-     * @return A map of the data that was saved in the file.
+     * @return converted Map<Integer, Object> object.
      */
-    private static Map read() throws FileNotFoundException {
-        Map map = null;
+    public static Map<Integer, Object> read() throws FileNotFoundException {
+        Map<Integer, Object> map = null;
 
-        try {
-            FileInputStream fis = new FileInputStream(DATABASE);
-            ObjectInputStream ois = new ObjectInputStream(fis);
-            map = (Map) ois.readObject();
+        try (FileInputStream fis = new FileInputStream(DATABASE); ObjectInputStream ois = new ObjectInputStream(fis);) {
+            map = (Map<Integer, Object>) ois.readObject();
         } catch (FileNotFoundException e) {
             // Error in accessing the file
-            throw new FileNotFoundException("File not found");
+            return new HashMap<>();
         } catch (IOException e) {
-            // Error in converting the Object to bytes
+            // Error in converting the Student
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
-            // You are converting an invalid stream to Object
+            // You are converting an invalid stream to Student
             e.printStackTrace();
         }
         return map;
@@ -62,7 +59,7 @@ public class Serialization<T> {
      * @return The object with the given id.
      */
     public static Object getById(int id) {
-        Map map;
+        Map<Integer, Object> map;
 
         try {
             map = read();
@@ -78,8 +75,8 @@ public class Serialization<T> {
      *
      * @return A map of the contents of the file.
      */
-    public static Map getAll() {
-        Map map;
+    public static Map<Integer, Object> getAll() {
+        Map<Integer, Object> map;
 
         try {
             map = read();
@@ -98,7 +95,7 @@ public class Serialization<T> {
      */
     public static void put(Serialize object) {
 
-        Map map;
+        Map<Integer, Object> map;
 
         try {
             map = read();
@@ -120,7 +117,7 @@ public class Serialization<T> {
      * @param object the object to be replaced
      */
     public static void replace(Serialize object) {
-        Map map;
+        Map<Integer, Object> map;
 
         try {
             map = read();
@@ -138,7 +135,7 @@ public class Serialization<T> {
      * @param object The object to be deleted.
      */
     public static void delete(Serialize object) {
-        Map map;
+        Map<Integer, Object> map;
 
         try {
             map = read();
@@ -156,7 +153,7 @@ public class Serialization<T> {
      * @param id The id of the object you want to delete.
      */
     public static void delete(int id) {
-        Map map;
+        Map<Integer, Object> map;
 
         try {
             map = read();

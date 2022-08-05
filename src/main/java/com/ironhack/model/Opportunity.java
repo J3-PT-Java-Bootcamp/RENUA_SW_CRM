@@ -7,7 +7,7 @@ import com.ironhack.service.OpportunityService;
 
 import java.io.Serializable;
 
-public class Opportunity extends Serialize implements Serializable {
+public class Opportunity extends Serialize {
 
     private Product product;
     private int quantity;
@@ -15,7 +15,7 @@ public class Opportunity extends Serialize implements Serializable {
     private Status status;
 
     static {
-        serialVersionUID = 3L; // No modify
+        serialVersionUID = 2L; // No modify
     }
 
     public Opportunity(Product product, int quantity, int decisionMaker, Status status) {

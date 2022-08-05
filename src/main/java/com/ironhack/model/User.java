@@ -4,12 +4,16 @@ import com.ironhack.serialization.Serialize;
 
 import java.io.Serializable;
 
-public abstract class User extends Serialize implements Serializable {
+public abstract class User extends Serialize {
 
     protected String name;
     protected String phoneNumber;
     protected String email;
     protected String companyName;
+
+    static {
+        serialVersionUID = 1L; // No modify
+    }
 
     public User(int id, String name, String phoneNumber, String email, String companyName) {
         super(id);
