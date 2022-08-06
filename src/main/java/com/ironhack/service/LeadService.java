@@ -34,7 +34,7 @@ public class LeadService {
         System.out.print("\nCompany name");
         final String companyName = UserInput.readText();
 
-        final var lead = new Lead(name, leadPn, companyName, leadEmail);
+        final var lead = new Lead(name, leadPn, leadEmail, companyName);
         put(lead);
 
         System.out.print("\nLead created: " + lead.getId());

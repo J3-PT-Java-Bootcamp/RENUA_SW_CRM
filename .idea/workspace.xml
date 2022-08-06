@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fffb96f7-8080-49fd-b4f4-41ff52ddf049" name="Changes" comment="Add toSting to the models and create CRMStarterService">
-      <change afterPath="$PROJECT_DIR$/UML_CRM_Diagram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Use_Case_Diagram.png" afterDir="false" />
+    <list default="true" id="fffb96f7-8080-49fd-b4f4-41ff52ddf049" name="Changes" comment="Creation of Readme, use case diagram and uml clas diagram.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML_CRM_Diagram.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/serialize/serialised-data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/serialize/serialised-data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/service/LeadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ironhack/service/LeadService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659724785611</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Creation of Readme, use case diagram and uml clas diagram.">
+      <created>1659763943466</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1659763943466</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +179,8 @@
     <MESSAGE value="Integrate current classes and methods" />
     <MESSAGE value="Add comment TODO" />
     <MESSAGE value="Add toSting to the models and create CRMStarterService" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add toSting to the models and create CRMStarterService" />
+    <MESSAGE value="Creation of Readme, use case diagram and uml clas diagram." />
+    <option name="LAST_COMMIT_MESSAGE" value="Creation of Readme, use case diagram and uml clas diagram." />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
