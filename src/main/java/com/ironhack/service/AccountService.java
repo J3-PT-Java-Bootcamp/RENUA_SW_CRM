@@ -40,7 +40,7 @@ public class AccountService {
             Industry.MANUFACTURING,
             Industry.MEDICAL,
             Industry.OTHER
-        }[UserInput.getIntBetween(1,5)];
+        }[UserInput.getIntBetween(1,5) - 1];
 
         System.out.print("\nNumber of employees (Between 0 and 999999999):\n");
         int employeeCount = UserInput.getIntBetween(0, 999999999);
