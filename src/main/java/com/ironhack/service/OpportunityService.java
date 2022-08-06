@@ -51,10 +51,11 @@ public class OpportunityService {
 
     public static void  updateStatus(UUID id, Status status) {
         var opportunity = getById(id);
-        
+
         if(opportunity.getStatus() == Status.OPEN) {
             opportunity.setStatus(status);
             put(opportunity);
+            System.out.println("Status updated to " + status);
         } else {
             System.out.println("\nOpportunity is already closed\n");
         }
