@@ -31,7 +31,7 @@ public class OpportunityService {
         System.out.println("2: FLATED");
         System.out.println("3: BOX");
 
-        Product product = new Product[] {Product.HYBRID, Product.FLATBED, Product.BOX}[UserInput.getIntBetween(1,3)];
+        Product product = new Product[] {Product.HYBRID, Product.FLATBED, Product.BOX}[UserInput.getIntBetween(1,3) - 1];
 
         System.out.print("\nNumber of trucks (Between 0 and 9999):\n");
         int trucksNum = UserInput.getIntBetween(0, 9999);
