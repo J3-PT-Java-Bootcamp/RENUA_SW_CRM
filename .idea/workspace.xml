@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fffb96f7-8080-49fd-b4f4-41ff52ddf049" name="Changes" comment="Change order of email and companyName">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ironhack/serialize/serialised-data.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659460732374</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Change order of email and companyName">
+      <created>1659771042373</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1659771042373</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +169,8 @@
     <MESSAGE value="Basic opportunity" />
     <MESSAGE value="Integrate current classes and methods" />
     <MESSAGE value="Add comment TODO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add comment TODO" />
+    <MESSAGE value="Change order of email and companyName" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change order of email and companyName" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
