@@ -4,16 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fffb96f7-8080-49fd-b4f4-41ff52ddf049" name="Changes" comment="Initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="fffb96f7-8080-49fd-b4f4-41ff52ddf049" name="Changes" comment="Change uml class diagram.">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -29,17 +41,25 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/IVAN/IdeaProjects/Practicas/RENUA_SW_CRM",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\IVAN\IdeaProjects\Practicas\RENUA_SW_CRM" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="com.ironhack.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ironhack.Main" />
       <module name="RENUA_SW_CRM" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ironhack.*" />
+          <option name="PATTERN" value="com.ironhack.enums.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -49,19 +69,20 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.com.ironhack.Main" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fffb96f7-8080-49fd-b4f4-41ff52ddf049" name="Changes" comment="" />
+      <changelist id="56cbeb4f-45b6-4e89-ae7b-b53a00526d8a" name="Changes" comment="Basic opportunity" />
       <created>1657977465038</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1657977465038</updated>
       <workItem from="1657977466567" duration="1135000" />
+      <workItem from="1659468908490" duration="1574000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1657977630210</created>
@@ -70,7 +91,70 @@
       <option name="project" value="LOCAL" />
       <updated>1657977630210</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Location refactor">
+      <created>1659458499058</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1659458499058</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Lead create">
+      <created>1659459568910</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1659459568910</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixed commander">
+      <created>1659459845452</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659459845452</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Show leads (missing toString)">
+      <created>1659460032112</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1659460032112</updated>
+    </task>
+    <task id="LOCAL-00006" summary="SHow lead name and id">
+      <created>1659460118717</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1659460118717</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Lookup lead by Id">
+      <created>1659460241570</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1659460241570</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Basic opportunity">
+      <created>1659460732374</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1659460732374</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Change order of email and companyName">
+      <created>1659771042373</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1659771042373</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Change uml class diagram.">
+      <created>1659772948268</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1659772948268</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -89,6 +173,24 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Location refactor" />
+    <MESSAGE value="Lead create" />
+    <MESSAGE value="Fixed commander" />
+    <MESSAGE value="Show leads (missing toString)" />
+    <MESSAGE value="SHow lead name and id" />
+    <MESSAGE value="Lookup lead by Id" />
+    <MESSAGE value="Basic opportunity" />
+    <MESSAGE value="Integrate current classes and methods" />
+    <MESSAGE value="Add comment TODO" />
+    <MESSAGE value="Change order of email and companyName" />
+    <MESSAGE value="Change uml class diagram." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change uml class diagram." />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.io.FileInputStream" memberName="fd" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
