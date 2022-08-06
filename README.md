@@ -6,10 +6,10 @@ This is a simple CRM that allows you to manage your customers and their orders.
 You can add, edit, delete and view your leads and customers.
 
 ### UML Class Diagram
-![Class_Diagram.png](Class_Diagram.PNG)
+![Class_Diagram.png](Class_Diagram.png)
 
 ### UML Use Case Diagram
-![Use_Diagram.png](Use_Diagram.PNG)
+![Use_Diagram.png](Use_Diagram.png)
 
 ### Diagram folders
 - **Commander**: Use to handle the command lines.
